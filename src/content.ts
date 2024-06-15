@@ -4,8 +4,10 @@ interface Question {
   question: string;
   answers: { text: string; correct: boolean }[];
 }
-
-console.log("Extension loaded NACHO");
+interface Option {
+  text: string;
+  element: HTMLElement;
+}
 
 const GetQuestionFromPage = () => {
   const potentialQuestionElements = document.getElementsByClassName("qtext");
@@ -15,15 +17,16 @@ const GetQuestionFromPage = () => {
   return questionText;
 };
 
-// Function to extract the options from the page
-const getOptionsFromPage = (): string[] => {
+const getOptionsFromPage = (): Option[] => {
   const potentialAnswerElements =
     document.querySelectorAll(".answer .d-flex p");
-  const answerTexts = Array.from(potentialAnswerElements).map(
-    (el) => el.textContent?.trim() || ""
-  );
-  return answerTexts;
+  const options = Array.from(potentialAnswerElements).map((el) => ({
+    text: el.textContent?.trim() || "",
+    element: el as HTMLElement,
+  }));
+  return options;
 };
+
 const MarkQuestions = (questions: Question[]) => {
   const questionText = GetQuestionFromPage();
   const options = getOptionsFromPage();
@@ -37,14 +40,20 @@ const MarkQuestions = (questions: Question[]) => {
         matchingQuestion.question,
         matchingQuestion.answers.filter((a) => a.correct).map((a) => a.text)
       );
-      matchingQuestion.answers.forEach((answer) => {
-        if (answer.correct) {
-          const answerElement = Array.from(
-            document.querySelectorAll(".info")
-          ).find((el) => el.textContent?.includes(answer.text));
-          if (answerElement) {
-            answerElement.classList.add("correct-answer");
+      options.forEach((option) => {
+        // find the option, if it is correct, mark it as correct, if not, mark it as incorrect, if it is not in the list, mark with a warning
+        console.log(option.text);
+        const matchingAnswer = matchingQuestion.answers.find(
+          (a) => a.text === option.text
+        );
+        if (matchingAnswer) {
+          if (matchingAnswer.correct) {
+            option.element.style.backgroundColor = "green";
+          } else {
+            option.element.style.backgroundColor = "red";
           }
+        } else {
+          option.element.style.backgroundColor = "yellow";
         }
       });
     } else {
@@ -77,6 +86,7 @@ const displayNoDataMessage = (question: string) => {
 const displayFoundQuestion = (question: string, correctOptions: string[]) => {
   const message = document.createElement("div");
   message.textContent = `Found question: ${question}`;
+
   message.className = "found-question";
   Object.assign(message.style, {
     position: "fixed",
