@@ -12,5 +12,13 @@
         { "text": "4", "correct": true },
         { "text": "22", "correct": false }
       ]
+    },
+    {
+      "question": "how was the weather yesterday",
+      "answers": [
+        { "text": "nice", "correct": true },
+        { "text": "average", "correct": false },
+        { "text": "not nice", "correct": false}
+      ]
     }
   ]
