@@ -27,7 +27,7 @@ const getOptionsFromPage = (): Option[] => {
   return options;
 };
 
-const MarkQuestions = (questions: Question[]) => {
+const markQuestions = (questions: Question[]) => {
   const questionText = GetQuestionFromPage();
   const options = getOptionsFromPage();
 
@@ -119,4 +119,29 @@ const displayFoundQuestion = (question: string, correctOptions: string[]) => {
   document.body.appendChild(message);
 };
 
-MarkQuestions(questions);
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.isEnabled !== undefined) {
+    if (request.isEnabled) {
+      markQuestions(questions);
+    } else {
+      const noDataMessage = document.querySelector(".no-data-message");
+      const foundQuestion = document.querySelector(".found-question");
+      if (noDataMessage) {
+        noDataMessage.remove();
+      }
+      if (foundQuestion) {
+        foundQuestion.remove();
+      }
+      const options = getOptionsFromPage();
+      options.forEach((option) => {
+        option.element.style.backgroundColor = "";
+      });
+    }
+  }
+});
+
+chrome.storage.sync.get(["isEnabled"], (result) => {
+  if (result.isEnabled) {
+    markQuestions(questions);
+  }
+});
