@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 
 const App: React.FC = () => {
   const [isEnabled, setIsEnabled] = React.useState(false);
+  const [isBackground, setIsBackground] = React.useState(false);
 
   useEffect(() => {
     chrome.storage.sync.get(['isEnabled'], (result) => {
@@ -9,34 +10,78 @@ const App: React.FC = () => {
     });
   }, []);
 
-  const handleToggle = () => {
+  useEffect(() => {
+    chrome.storage.sync.get(['isBackground'], (result) => {
+      setIsBackground(result.isBackground || false);
+    });
+  }, [isBackground]);
+
+  const handleEnableToggle = () => {
     const newState = !isEnabled;
     setIsEnabled(newState);
     chrome.storage.sync.set({ isEnabled: newState });
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       if (tabs[0]?.id) {
-        chrome.tabs.sendMessage(tabs[0].id, { isEnabled: newState });
+        chrome.tabs.sendMessage(tabs[0].id, { isEnabled: newState, isBackground: isBackground});
       }
     });
   };
+
+  const handleBackgroundToggle = () => {
+    const newState = !isBackground;
+    setIsBackground(newState);
+    chrome.storage.sync.set({ isBackground: newState });
+    if (isEnabled) {
+      chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+        if (tabs[0]?.id) {
+          chrome.tabs.sendMessage(tabs[0].id, { isBackground: newState, isEnabled: isEnabled});
+        }
+      });
+    }
+  };
+
   return (
-    <div className=' text-gray-900 p-4 w-[200px] h-[200px] overflow-hidden rounded-md'>
-      <h1 className='text-2xl font-bold'>
-        Test Help
-      </h1>
-      <p className='text-sm mt-2'>
-        Do you want to enable the extension?
-      </p>
-      <div className='flex items-center mt-2'>
-        <button
-          className={`${isEnabled ? 'bg-green-500' : 'bg-gray-500'
-            } text-white px-4 py-2 rounded-lg`}
-          onClick={handleToggle}
-        >
-          {isEnabled ? 'Disable' : 'Enable '}
-        </button>
+    <div className="app bg-gray-100 p-4 min-h-screen">
+      <h1 className="text-2xl font-bold text-center mb-4">Test Help</h1>
+      <div className="toggle-container mb-4">
+        <p className="text-lg">Enable the extension?</p>
+        <label className="switch inline-flex items-center cursor-pointer">
+          <input
+            type="checkbox"
+            className="hidden"
+            checked={isEnabled}
+            onChange={handleEnableToggle}
+          />
+          <span className={`w-12 h-6 bg-gray-300 rounded-full shadow-inner flex-shrink-0
+            ${isEnabled ? 'bg-green-500' : 'bg-gray-300'}`}>
+            <span
+              className={`block w-6 h-6 bg-white rounded-full shadow transform transition-transform ${isEnabled ? 'translate-x-6' : ''
+                }`}
+            ></span>
+          </span>
+        </label>
       </div>
-    </div>
+      <div className={`
+        ${!isEnabled ? 'pointer-events-none opacity-50' : ''}
+        `}>
+        <p className="text-lg">Highlight the background?</p>
+        <label className="inline-flex items-center cursor-pointer">
+          <input
+            type="checkbox"
+            className="hidden"
+            checked={isBackground}
+            onChange={handleBackgroundToggle}
+          />
+          <span className={`w-12 h-6 bg-gray-300 rounded-full shadow-inner flex-shrink-0 ${isBackground ? 'bg-green-500' : 'bg-gray-300'}`
+          } >
+            <span
+              className={`block w-6 h-6 bg-white rounded-full shadow transform transition-transform ${isBackground ? 'translate-x-6' : ''
+                }`}
+            ></span>
+          </span>
+        </label>
+      </div>
+    </div >
   );
 };
 

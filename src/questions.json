@@ -1,24 +1,3103 @@
 [
-    {
-      "question": "What is the capital of France?",
-      "answers": [
-        { "text": "Paris", "correct": true },
-        { "text": "London", "correct": false }
-      ]
-    },
-    {
-      "question": "What is 2 + 2?",
-      "answers": [
-        { "text": "4", "correct": true },
-        { "text": "22", "correct": false }
-      ]
-    },
-    {
-      "question": "how was the weather yesterday",
-      "answers": [
-        { "text": "nice", "correct": true },
-        { "text": "average", "correct": false },
-        { "text": "not nice", "correct": false}
-      ]
-    }
-  ]
+  {
+    "question": "how was the weather yesterday?",
+    "answers": [
+      {
+        "text": "nice",
+        "correct": true
+      },
+      {
+        "text": "average",
+        "correct": false
+      },
+      {
+        "text": "not nice",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "which of the following facilities or abilities are required to provide mutual exclusion support?",
+    "answers": [
+      {
+        "text": "the task stays in its critical section only for a finite amount of time",
+        "correct": true
+      },
+      {
+        "text": "task scheduling must be considered",
+        "correct": false
+      },
+      {
+        "text": "the relative speeds of the tasks must be taken into account",
+        "correct": false
+      },
+      {
+        "text": "a task that is performed outside the critical section must not affect the behavior of a task in the critical section",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "threads in operating system:",
+    "answers": [
+      {
+        "text": "they share context except registers and stack",
+        "correct": true
+      },
+      {
+        "text": "they share the entire context",
+        "correct": false
+      },
+      {
+        "text": "they share context except stack",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "what is included in the context that must be saved for a synchronous (inter-instruction) precision interrupt?",
+    "answers": [
+      {
+        "text": "instruction register",
+        "correct": false
+      },
+      {
+        "text": "collective of individual interrupt mask",
+        "correct": true
+      },
+      {
+        "text": "general purpose registers",
+        "correct": true
+      },
+      {
+        "text": "program counter",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "interrupt mask:",
+    "answers": [
+      {
+        "text": "can unblock interrupts when the interrupt handler completes",
+        "correct": true
+      },
+      {
+        "text": "can be set and reset by special processor instructions",
+        "correct": true
+      },
+      {
+        "text": "causes interrupts to be disabled when an interrupt is accepted",
+        "correct": true
+      },
+      {
+        "text": "must be part of the status register",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "the direct resume rule means that:",
+    "answers": [
+      {
+        "text": "the resuming process gets a critical region after the resumed process exits the critical region",
+        "correct": false
+      },
+      {
+        "text": "the resuming process applies for the critical region just like other processes waiting to enter the critical region",
+        "correct": true
+      },
+      {
+        "text": "the resuming process loses the critical region",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "general semaphore:",
+    "answers": [
+      {
+        "text": "requires busy waiting",
+        "correct": false
+      },
+      {
+        "text": "is to perform only indivisible operations",
+        "correct": true
+      },
+      {
+        "text": "is a shared variable",
+        "correct": true
+      },
+      {
+        "text": "can be only non-negative",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "the system stack must provide space for:",
+    "answers": [
+      {
+        "text": "processor registers in as many copies as there are interrupt lines and possible software interrupts",
+        "correct": false
+      },
+      {
+        "text": "processor registers in as many copies as there are devices in the system +1",
+        "correct": false
+      },
+      {
+        "text": "cpu registers",
+        "correct": false
+      },
+      {
+        "text": "processor registers in as many copies as there are interrupt lines +1",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "in a concurrent environment, the operating system decides which task the cpu gets, when, and for how long. this feature is called:",
+    "answers": [
+      {
+        "text": "task scheduling",
+        "correct": true
+      },
+      {
+        "text": "traffic management",
+        "correct": false
+      },
+      {
+        "text": "task timetable planning",
+        "correct": false
+      },
+      {
+        "text": "task management",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "which scheduler needs to make a decision the fastest?",
+    "answers": [
+      {
+        "text": "long-term",
+        "correct": false
+      },
+      {
+        "text": "short-term",
+        "correct": true
+      },
+      {
+        "text": "additional",
+        "correct": false
+      },
+      {
+        "text": "medium-term",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "using test-and-set or compare-and-swap in synchronization:",
+    "answers": [
+      {
+        "text": "stops the processor if 0 is read",
+        "correct": false
+      },
+      {
+        "text": "it requires processes to actively wait",
+        "correct": true
+      },
+      {
+        "text": "requires organizing inactive waiting in queues",
+        "correct": false
+      },
+      {
+        "text": "it can only be applied in systems with shared memory",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "the environment in which the process is executed includes:",
+    "answers": [
+      {
+        "text": "a set of environment variables",
+        "correct": true
+      },
+      {
+        "text": "contents of the interrupt request register",
+        "correct": false
+      },
+      {
+        "text": "the content in the memory management unit",
+        "correct": false
+      },
+      {
+        "text": "process address space",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "what is a scheduler?",
+    "answers": [
+      {
+        "text": "procedure that schedules frame release in the page replace algorithm",
+        "correct": false
+      },
+      {
+        "text": "a kernel routine that selects a task to execute",
+        "correct": true
+      },
+      {
+        "text": "the system process that allocates the processor",
+        "correct": false
+      },
+      {
+        "text": "memory allocation procedure",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "interrupt request register is:",
+    "answers": [
+      {
+        "text": "a register where interrupt line states are stored",
+        "correct": true
+      },
+      {
+        "text": "a register that blocks or unblocks individual interrupts",
+        "correct": false
+      },
+      {
+        "text": "a combinational circuit that calculates the number of the interrupt received",
+        "correct": false
+      },
+      {
+        "text": "a register that blocks or unblocks all interrupts",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "what does the kernel do when there is no task (process) to run?",
+    "answers": [
+      {
+        "text": "starts the idle task",
+        "correct": true
+      },
+      {
+        "text": "executes an infinite loop in the kernel until a task arrives",
+        "correct": false
+      },
+      {
+        "text": "resets the entire system",
+        "correct": false
+      },
+      {
+        "text": "switches off the power supply",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "the scheduler decisions take the form:",
+    "answers": [
+      {
+        "text": "change from active to ready state",
+        "correct": false
+      },
+      {
+        "text": "change from waiting to ready state",
+        "correct": false
+      },
+      {
+        "text": "change from ready to active state",
+        "correct": true
+      },
+      {
+        "text": "change from ready to waiting state",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "what are the functions of the kernel?",
+    "answers": [
+      {
+        "text": "memory management",
+        "correct": false
+      },
+      {
+        "text": "program management",
+        "correct": false
+      },
+      {
+        "text": "interrupt handling",
+        "correct": true
+      },
+      {
+        "text": "file management",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "precise interrupts are:",
+    "answers": [
+      {
+        "text": "unblocked only in a stable state between the execution of successive instructions",
+        "correct": false
+      },
+      {
+        "text": "accepted only in a stable state between the execution of successive instructions",
+        "correct": true
+      },
+      {
+        "text": "transferred only in a stable state between the execution of successive instructions",
+        "correct": false
+      },
+      {
+        "text": "only issued in a stable state between executions of subsequent instructions",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "processor access scheduling decisions may be made under which of the following circumstances?",
+    "answers": [
+      {
+        "text": "when a task goes from the waiting state to the ready state",
+        "correct": true
+      },
+      {
+        "text": "when a task terminates",
+        "correct": true
+      },
+      {
+        "text": "when a task transitions from the active state to the ready state",
+        "correct": true
+      },
+      {
+        "text": "when a task goes from the active state to the waiting state",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "context switch is:",
+    "answers": [
+      {
+        "text": "switching to the system stack",
+        "correct": false
+      },
+      {
+        "text": "calling the kernel of the operating system",
+        "correct": false
+      },
+      {
+        "text": "writing registers to the task stack and retrieving them from another task stack",
+        "correct": true
+      },
+      {
+        "text": "extracode execution",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "in a multitasking environment, the operating system decides which task the cpu gets, when, and for how long. this feature is called:",
+    "answers": [
+      {
+        "text": "task timetable management",
+        "correct": false
+      },
+      {
+        "text": "task management",
+        "correct": false
+      },
+      {
+        "text": "task scheduling",
+        "correct": true
+      },
+      {
+        "text": "traffic control",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "in operating system:",
+    "answers": [
+      {
+        "text": "some exceptions are handled, some not",
+        "correct": false
+      },
+      {
+        "text": "the decision to handle an exception or not is made dynamically",
+        "correct": false
+      },
+      {
+        "text": "every exception must be handled",
+        "correct": true
+      },
+      {
+        "text": "timer interrupt may not be handled",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "the number of tasks performed on the system in a given time is:",
+    "answers": [
+      {
+        "text": "utilization",
+        "correct": false
+      },
+      {
+        "text": "throughput",
+        "correct": true
+      },
+      {
+        "text": "efficiency",
+        "correct": false
+      },
+      {
+        "text": "response time",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "when a suspended program is moved to auxiliary memory, its process state is called:",
+    "answers": [
+      {
+        "text": "swept away",
+        "correct": true
+      },
+      {
+        "text": "exchanged",
+        "correct": false
+      },
+      {
+        "text": "moved out",
+        "correct": false
+      },
+      {
+        "text": "rinsed out",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "indulgent scheduling is the best mechanism for:",
+    "answers": [
+      {
+        "text": "system with many process classes",
+        "correct": false
+      },
+      {
+        "text": "every system",
+        "correct": false
+      },
+      {
+        "text": "real-time system",
+        "correct": true
+      },
+      {
+        "text": "time-sharing system",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "what can happen when a job leaves the critical section and more than 1 task is waiting for the critical section?",
+    "answers": [
+      {
+        "text": "deadlock waiting for critical section",
+        "correct": false
+      },
+      {
+        "text": "active waiting for a critical section",
+        "correct": false
+      },
+      {
+        "text": "starvation awaiting a critical section",
+        "correct": true
+      },
+      {
+        "text": "letting both tasks into the critical section",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "in the case of hardware interrupt summation ('wire or'):",
+    "answers": [
+      {
+        "text": "the processor can programatically poll devices about issuing an interrupt",
+        "correct": true
+      },
+      {
+        "text": "the interrupt circuit can query devices about issuing an interrupt",
+        "correct": false
+      },
+      {
+        "text": "the bus driver can poll devices about issuing an interrupt",
+        "correct": true
+      },
+      {
+        "text": "the interrupt source is identified by a special bus signal",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "using test-and-set or compare-and-swap in synchronization:",
+    "answers": [
+      {
+        "text": "stops the processor if 0 is read",
+        "correct": false
+      },
+      {
+        "text": "can be applied only in distributed systems",
+        "correct": false
+      },
+      {
+        "text": "requires organizing inactive waiting in queues",
+        "correct": false
+      },
+      {
+        "text": "it requires processes to actively wait",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "in a multitasking environment, the operating system decides which task the cpu gets, when, and for how long. this feature is called:",
+    "answers": [
+      {
+        "text": "task timetable management",
+        "correct": false
+      },
+      {
+        "text": "traffic control",
+        "correct": false
+      },
+      {
+        "text": "task scheduling",
+        "correct": true
+      },
+      {
+        "text": "task management",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "interrupt vector is saved in a case of:",
+    "answers": [
+      {
+        "text": "subroutine call",
+        "correct": false
+      },
+      {
+        "text": "accepting a hardware interrupt",
+        "correct": true
+      },
+      {
+        "text": "jump with trace",
+        "correct": true
+      },
+      {
+        "text": "accepting a non-maskable interrupt",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "in round-robin scheduling, if each task is allotted a certain amount of time to execute, it is called:",
+    "answers": [
+      {
+        "text": "batch time",
+        "correct": false
+      },
+      {
+        "text": "period",
+        "correct": false
+      },
+      {
+        "text": "work time",
+        "correct": false
+      },
+      {
+        "text": "time slice",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "multi-threading on a multi-processor machine:",
+    "answers": [
+      {
+        "text": "increases concurrency",
+        "correct": true
+      },
+      {
+        "text": "can increase or decrease concurrency",
+        "correct": false
+      },
+      {
+        "text": "reduces concurrency",
+        "correct": false
+      },
+      {
+        "text": "does not affect concurrency",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "in what states can a task occur?",
+    "answers": [
+      {
+        "text": "ready",
+        "correct": true
+      },
+      {
+        "text": "blocked",
+        "correct": true
+      },
+      {
+        "text": "current",
+        "correct": true
+      },
+      {
+        "text": "resetted",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "the direct resume rule means that:",
+    "answers": [
+      {
+        "text": "the resuming process gets a critical region after the resumed process exits the monitor",
+        "correct": false
+      },
+      {
+        "text": "the resuming process applies for the critical region just like other processes on monitor input",
+        "correct": true
+      },
+      {
+        "text": "the resuming process loses the critical region",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "in a concurrent environment, the operating system decides which task the cpu gets, when, and for how long. this feature is called:",
+    "answers": [
+      {
+        "text": "task management",
+        "correct": false
+      },
+      {
+        "text": "traffic management",
+        "correct": false
+      },
+      {
+        "text": "task scheduling",
+        "correct": true
+      },
+      {
+        "text": "task timetable planning",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "there are three processes in the system: c - calculation process (batch process performing complex calculations lasting several hours), t - text editor (user edits text document), k - compiler (the user compiles the program, e.g. in c++). assign processes to priorities in the operating system from the highest to the lowest priority.",
+    "answers": [
+      {
+        "text": "highest - t",
+        "correct": true
+      },
+      {
+        "text": "intermediate - k",
+        "correct": true
+      },
+      {
+        "text": "lowest - c",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "general semaphore:",
+    "answers": [
+      {
+        "text": "is a shared variable",
+        "correct": true
+      },
+      {
+        "text": "requires busy waiting",
+        "correct": false
+      },
+      {
+        "text": "is to perform only indivisible operations",
+        "correct": true
+      },
+      {
+        "text": "can be only non-negative",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "essential activity in the interrupt handling procedure (i.e., the activity for which the interrupt is issued) consists in:",
+    "answers": [
+      {
+        "text": "saving the context of the interrupted process",
+        "correct": false
+      },
+      {
+        "text": "unlocking the process waiting for this interrupt",
+        "correct": true
+      },
+      {
+        "text": "blocking the process to wait for the next interrupt",
+        "correct": false
+      },
+      {
+        "text": "unlocking the process to handle this interrupt at a higher level of abstraction",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "when is the scheduler called?",
+    "answers": [
+      {
+        "text": "at the request of a user task",
+        "correct": false
+      },
+      {
+        "text": "at the end of the execution of each kernel procedure",
+        "correct": true
+      },
+      {
+        "text": "at the start of execution of each kernel procedure",
+        "correct": false
+      },
+      {
+        "text": "when the scheduler decides itself",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "scheduler function is:",
+    "answers": [
+      {
+        "text": "counting the cpu time used by tasks",
+        "correct": false
+      },
+      {
+        "text": "selecting a task to run",
+        "correct": true
+      },
+      {
+        "text": "scheduling tasks on the processor",
+        "correct": false
+      },
+      {
+        "text": "changing task priorities",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "the number of tasks performed on the system in a given time is:",
+    "answers": [
+      {
+        "text": "efficiency",
+        "correct": false
+      },
+      {
+        "text": "utilization",
+        "correct": false
+      },
+      {
+        "text": "throughput",
+        "correct": true
+      },
+      {
+        "text": "response time",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "what is included in the context that must be maintained for a synchronous precision interrupt?",
+    "answers": [
+      {
+        "text": "program counter",
+        "correct": true
+      },
+      {
+        "text": "instruction register",
+        "correct": false
+      },
+      {
+        "text": "collective or individual interrupt mask",
+        "correct": true
+      },
+      {
+        "text": "general purpose registers",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "which task queue can never be empty?",
+    "answers": [
+      {
+        "text": "swept away tasks",
+        "correct": false
+      },
+      {
+        "text": "ready tasks",
+        "correct": false
+      },
+      {
+        "text": "suspended tasks",
+        "correct": false
+      },
+      {
+        "text": "running tasks",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "imprecise interrupts can be handled:",
+    "answers": [
+      {
+        "text": "after clearing the pipeline from the instructions",
+        "correct": true
+      },
+      {
+        "text": "after saving the full state of the pipeline",
+        "correct": true
+      },
+      {
+        "text": "when new instructions are suspended to be fetched into the pipeline",
+        "correct": false
+      },
+      {
+        "text": "only when the program allows accepting interrupts",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "priority scheduling is the best mechanism for:",
+    "answers": [
+      {
+        "text": "every system",
+        "correct": false
+      },
+      {
+        "text": "real-time system",
+        "correct": false
+      },
+      {
+        "text": "system with many process classes",
+        "correct": true
+      },
+      {
+        "text": "time-sharing system",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "using test-and-set or compare-and-swap in synchronization:",
+    "answers": [
+      {
+        "text": "it requires processes to actively wait",
+        "correct": true
+      },
+      {
+        "text": "requires organizing inactive waiting in queues",
+        "correct": false
+      },
+      {
+        "text": "it can only be applied in systems with shared memory",
+        "correct": true
+      },
+      {
+        "text": "stops the processor if 0 is read",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "context switch is:",
+    "answers": [
+      {
+        "text": "writing registers to the task stack and retrieving them from another task stack",
+        "correct": true
+      },
+      {
+        "text": "switching to the system stack",
+        "correct": false
+      },
+      {
+        "text": "calling the kernel of the operating system",
+        "correct": false
+      },
+      {
+        "text": "extracode execution",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "in indulgent scheduling, the process keeps the cpu until:",
+    "answers": [
+      {
+        "text": "waiving",
+        "correct": true
+      },
+      {
+        "text": "next interrupt from the device",
+        "correct": false
+      },
+      {
+        "text": "next interrupt from the timer",
+        "correct": false
+      },
+      {
+        "text": "termination",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "at the suspended state is a process that:",
+    "answers": [
+      {
+        "text": "waits for an i/o operation to complete",
+        "correct": true
+      },
+      {
+        "text": "waits for a processor",
+        "correct": false
+      },
+      {
+        "text": "fills the processor idle time",
+        "correct": false
+      },
+      {
+        "text": "occupies a processor",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "conditional variables in a monitor",
+    "answers": [
+      {
+        "text": "they guard access to the critical region of the monitor",
+        "correct": false
+      },
+      {
+        "text": "they are used to suspend processes that cannot run because the conditions for their continuation are not met",
+        "correct": true
+      },
+      {
+        "text": "they are used to check whether the conditions for process continuation are met",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "round-robin scheduling is the best mechanism for:",
+    "answers": [
+      {
+        "text": "time-sharing system",
+        "correct": true
+      },
+      {
+        "text": "real-time system",
+        "correct": false
+      },
+      {
+        "text": "system with different classes of tasks",
+        "correct": false
+      },
+      {
+        "text": "every system",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "the direct resume rule means that:",
+    "answers": [
+      {
+        "text": "the resuming process gets a critical region after the resumed process exits the critical region",
+        "correct": false
+      },
+      {
+        "text": "the resuming process loses the critical region",
+        "correct": true
+      },
+      {
+        "text": "the resuming process applies for the critical region just like other processes waiting to enter the critical region",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "system/user threads:",
+    "answers": [
+      {
+        "text": "user-level threads share the same stack",
+        "correct": false
+      },
+      {
+        "text": "system level thread descriptors are stored in the program address space",
+        "correct": false
+      },
+      {
+        "text": "user-level threads share the same execution context",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "the number of tasks performed on the system in a given time is:",
+    "answers": [
+      {
+        "text": "response time",
+        "correct": false
+      },
+      {
+        "text": "utilization",
+        "correct": false
+      },
+      {
+        "text": "throughput",
+        "correct": true
+      },
+      {
+        "text": "efficiency",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "to end the interrupt service, use the following instruction:",
+    "answers": [
+      {
+        "text": "regular jump instruction",
+        "correct": false
+      },
+      {
+        "text": "special return instruction",
+        "correct": true
+      },
+      {
+        "text": "return from subroutine call",
+        "correct": false
+      },
+      {
+        "text": "none - the processor will end the service automatically",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "the microkernel of the operating system performs the following role:",
+    "answers": [
+      {
+        "text": "runs programs",
+        "correct": false
+      },
+      {
+        "text": "it receives interrupts and routes them to the appropriate drivers and other layers of the system",
+        "correct": true
+      },
+      {
+        "text": "synchronizes processes",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "in multi-level interrupts (vectored interrupts) the jump is performed:",
+    "answers": [
+      {
+        "text": "to a fixed address",
+        "correct": false
+      },
+      {
+        "text": "to the address contained in the device driver, provided by the i/o instruction",
+        "correct": false
+      },
+      {
+        "text": "to the address specified in the given processor register",
+        "correct": false
+      },
+      {
+        "text": "according to the table indexed by the interrupt number",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "by definition, a deadlock is a situation where:",
+    "answers": [
+      {
+        "text": "at least two processes are waiting for conditions that cannot be met",
+        "correct": false
+      },
+      {
+        "text": "any greater than zero number of processes are waiting for conditions that cannot be met",
+        "correct": true
+      },
+      {
+        "text": "any greater than one number of processes are waiting for conditions that cannot be met",
+        "correct": false
+      },
+      {
+        "text": "exactly two processes are waiting for conditions that cannot be met",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "what can happen when a job leaves the critical section and more than 1 task is waiting for the critical section?",
+    "answers": [
+      {
+        "text": "deadlock waiting for critical section",
+        "correct": false
+      },
+      {
+        "text": "letting both tasks into the critical section",
+        "correct": false
+      },
+      {
+        "text": "active waiting for a critical section",
+        "correct": false
+      },
+      {
+        "text": "starvation awaiting a critical section",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "how does the operating system call the task completion subroutine?",
+    "answers": [
+      {
+        "text": "sets the trace in the terminating subroutine to the current position - 2",
+        "correct": true
+      },
+      {
+        "text": "builds the frame of the terminating subroutine on the task stack - 3",
+        "correct": true
+      },
+      {
+        "text": "recreates the context programmatically and executes the iret instruction - 4",
+        "correct": true
+      },
+      {
+        "text": "builds an interrupt vector on the system stack pointing to the terminating subroutine code - 1",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "scheduling algorithms can be:",
+    "answers": [
+      {
+        "text": "indulgent",
+        "correct": true
+      },
+      {
+        "text": "interrupting",
+        "correct": false
+      },
+      {
+        "text": "preemptive",
+        "correct": true
+      },
+      {
+        "text": "term changing",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "the process context includes:",
+    "answers": [
+      {
+        "text": "general purpose registers",
+        "correct": true
+      },
+      {
+        "text": "process descriptor",
+        "correct": true
+      },
+      {
+        "text": "external device registers",
+        "correct": false
+      },
+      {
+        "text": "code and data",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "round-robin scheduling is the best mechanism for:",
+    "answers": [
+      {
+        "text": "system with different classes of tasks",
+        "correct": false
+      },
+      {
+        "text": "time-sharing system",
+        "correct": true
+      },
+      {
+        "text": "every system",
+        "correct": false
+      },
+      {
+        "text": "real-time system",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "two successive executions of operation v in one process on a binary semaphore in down state:",
+    "answers": [
+      {
+        "text": "it doesn't change anything",
+        "correct": false
+      },
+      {
+        "text": "increases semaphore value by 2",
+        "correct": false
+      },
+      {
+        "text": "raises the semaphore if there are no suspended processes",
+        "correct": true
+      },
+      {
+        "text": "if the semaphore guards a critical region, it can let two processes enter the critical region",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "in a multitasking environment, the operating system decides which task the cpu gets, when, and for how long. this feature is called:",
+    "answers": [
+      {
+        "text": "traffic control",
+        "correct": false
+      },
+      {
+        "text": "task management",
+        "correct": false
+      },
+      {
+        "text": "task timetable management",
+        "correct": false
+      },
+      {
+        "text": "task scheduling",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "when starting a program, how is control passed to it from the operating system?",
+    "answers": [
+      {
+        "text": "extracode",
+        "correct": false
+      },
+      {
+        "text": "return from interrupt handler iret",
+        "correct": true
+      },
+      {
+        "text": "jump with trace",
+        "correct": false
+      },
+      {
+        "text": "jump",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "which of the following statements applies to the process?",
+    "answers": [
+      {
+        "text": "a process is defined as a set of resources needed to run a program",
+        "correct": true
+      },
+      {
+        "text": "the execution of the process must proceed in a sequential manner",
+        "correct": true
+      },
+      {
+        "text": "a process is a running program",
+        "correct": true
+      },
+      {
+        "text": "a process is code and data loaded into main memory",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "the purpose of mutual exclusion is:",
+    "answers": [
+      {
+        "text": "deadlock prevention",
+        "correct": false
+      },
+      {
+        "text": "obtaining exclusive access",
+        "correct": true
+      },
+      {
+        "text": "secure context switch",
+        "correct": false
+      },
+      {
+        "text": "interrupt service",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "inter-process communication can be organized using:",
+    "answers": [
+      {
+        "text": "shared memory fields accessible through system calls",
+        "correct": true
+      },
+      {
+        "text": "shared directly addressable memory fields",
+        "correct": true
+      },
+      {
+        "text": "messages",
+        "correct": true
+      },
+      {
+        "text": "interrupts",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "interrupt vector:",
+    "answers": [
+      {
+        "text": "contains minimal information that cannot be saved programmatically",
+        "correct": true
+      },
+      {
+        "text": "it is saved automatically when an interrupt is accepted",
+        "correct": true
+      },
+      {
+        "text": "contains the instruction counter, condition bits, interrupt mask, and general purpose registers",
+        "correct": false
+      },
+      {
+        "text": "contains the id of the process that should be restarted",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "what does it mean that the interrupt subsystem is vectored (all components of the correct answer must be given)?",
+    "answers": [
+      {
+        "text": "interrupts are accepted on multiple input lines",
+        "correct": true
+      },
+      {
+        "text": "there is an interrupt handling table indexed by the interrupt line number",
+        "correct": true
+      },
+      {
+        "text": "there is an individual interrupt mask",
+        "correct": true
+      },
+      {
+        "text": "uses interrupt vector in interrupt handling",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "the interrupt encoder is:",
+    "answers": [
+      {
+        "text": "a combinational circuit that computes the number of the reported and unmasked interrupt with the highest priority",
+        "correct": true
+      },
+      {
+        "text": "a register that tells the processor the interrupt number to be handled",
+        "correct": false
+      },
+      {
+        "text": "a combinational circuit that calculates the value of a new individual interrupt mask",
+        "correct": true
+      },
+      {
+        "text": "a combinational circuit that transmits to the processor the number of the interrupt to be serviced",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "with indulgent scheduling, once a cpu is allocated to a task, the task keeps it until:",
+    "answers": [
+      {
+        "text": "task termination",
+        "correct": true
+      },
+      {
+        "text": "transition a task from the active state to the ready state",
+        "correct": false
+      },
+      {
+        "text": "releasing the processor by the task",
+        "correct": true
+      },
+      {
+        "text": "transition a task from the ready state to the active state",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "indulgent scheduling is the best mechanism for:",
+    "answers": [
+      {
+        "text": "every system",
+        "correct": false
+      },
+      {
+        "text": "system with many process classes",
+        "correct": false
+      },
+      {
+        "text": "real-time system",
+        "correct": true
+      },
+      {
+        "text": "time-sharing system",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "sjf selects the task:",
+    "answers": [
+      {
+        "text": "which was first placed in the queue",
+        "correct": false
+      },
+      {
+        "text": "with the least cpu requirement",
+        "correct": true
+      },
+      {
+        "text": "which was last placed in the queue",
+        "correct": false
+      },
+      {
+        "text": "who waited the longest in the queue",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "which scheduling is used to organize concurrency?",
+    "answers": [
+      {
+        "text": "long-term",
+        "correct": false
+      },
+      {
+        "text": "short-term",
+        "correct": true
+      },
+      {
+        "text": "preempting",
+        "correct": false
+      },
+      {
+        "text": "medium-term",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "in round-robin scheduling, if each task is allotted a certain amount of time to execute, it is called:",
+    "answers": [
+      {
+        "text": "period",
+        "correct": false
+      },
+      {
+        "text": "batch time",
+        "correct": false
+      },
+      {
+        "text": "work time",
+        "correct": false
+      },
+      {
+        "text": "time slice",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "what is the average time in the system for tasks in the batch, using sjf algorithm? the system is equipped with 2 processors",
+    "answers": [
+      {
+        "text": "4,0",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "what mechanism is part of batch systems?",
+    "answers": [
+      {
+        "text": "medium-term scheduler",
+        "correct": true
+      },
+      {
+        "text": "no scheduler is needed",
+        "correct": false
+      },
+      {
+        "text": "long-term scheduler",
+        "correct": true
+      },
+      {
+        "text": "short-term scheduler",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "the test-and-set or compare-and-swap instruction has the following characteristics:",
+    "answers": [
+      {
+        "text": "requires active waiting from tasks",
+        "correct": true
+      },
+      {
+        "text": "it is possible to use only in 1-processor systems",
+        "correct": false
+      },
+      {
+        "text": "it is possible to deadlock with tas/cas operations on multiple variables",
+        "correct": true
+      },
+      {
+        "text": "it is possible to use only on computers with common memory",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "what are the sequence of actions in interrupt handling?",
+    "answers": [
+      {
+        "text": "saving a copy of the interrupt vector (pc and sr) - 1",
+        "correct": true
+      },
+      {
+        "text": "switching to system mode (modification of pc and status register) - 2",
+        "correct": true
+      },
+      {
+        "text": "programmatic context saving - 3",
+        "correct": true
+      },
+      {
+        "text": "switching to the system stack - 4",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "in the philosophers problem, if there are 4 of them:",
+    "answers": [
+      {
+        "text": "deadlock is not possible",
+        "correct": false
+      },
+      {
+        "text": "starvation is not possible",
+        "correct": true
+      },
+      {
+        "text": "starvation is possible",
+        "correct": false
+      },
+      {
+        "text": "deadlock is possible",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "after accepting an interrupt, the next interrupts are:",
+    "answers": [
+      {
+        "text": "unblocked",
+        "correct": false
+      },
+      {
+        "text": "partly blocked, partly unblocked, according to the level of the accepted interrupt",
+        "correct": false
+      },
+      {
+        "text": "blocked",
+        "correct": true
+      },
+      {
+        "text": "some blocked, some unblocked, developer decides",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "how is exception identification performed?",
+    "answers": [
+      {
+        "text": "the specification of hardware interrupts is given over the data bus",
+        "correct": true
+      },
+      {
+        "text": "all exceptions are specified using the data bus",
+        "correct": false
+      },
+      {
+        "text": "the specification of hardware interrupts and traps is given over the data bus",
+        "correct": false
+      },
+      {
+        "text": "the specification of hardware interrupts and errors is given over the data bus",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "the kernel (microkernel) is responsible for:",
+    "answers": [
+      {
+        "text": "task control",
+        "correct": true
+      },
+      {
+        "text": "interrupt handling (at the elementary level, then they are passed on to other layers)",
+        "correct": true
+      },
+      {
+        "text": "memory allocation and freeing",
+        "correct": false
+      },
+      {
+        "text": "synchronization of processes and devices with processes",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "the process context includes:",
+    "answers": [
+      {
+        "text": "general purpose registers",
+        "correct": true
+      },
+      {
+        "text": "process descriptor",
+        "correct": false
+      },
+      {
+        "text": "external devices registers",
+        "correct": false
+      },
+      {
+        "text": "the content of the file containing the program",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "when an exception is raised in user mode, the operating system switches to the kernel system stack, and what happens when an exception is raised in system mode?",
+    "answers": [
+      {
+        "text": "initializes the kernel system stack from the scratch",
+        "correct": false
+      },
+      {
+        "text": "switches back to the application program stack",
+        "correct": false
+      },
+      {
+        "text": "nothing special, it builds the context on the kernel system stack",
+        "correct": true
+      },
+      {
+        "text": "switches to the next kernel system stack",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "what is the average time in the system for tasks in the batch, using sjf algorithm? the system is equipped with 2 processors",
+    "answers": [
+      {
+        "text": "4,0",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "what mechanism is part of batch systems?",
+    "answers": [
+      {
+        "text": "medium-term scheduler",
+        "correct": true
+      },
+      {
+        "text": "no scheduler is needed",
+        "correct": false
+      },
+      {
+        "text": "long-term scheduler",
+        "correct": true
+      },
+      {
+        "text": "short-term scheduler",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "the test-and-set or compare-and-swap instruction has the following characteristics:",
+    "answers": [
+      {
+        "text": "requires active waiting from tasks",
+        "correct": true
+      },
+      {
+        "text": "it is possible to use only in 1-processor systems",
+        "correct": false
+      },
+      {
+        "text": "it is possible to deadlock with tas/cas operations on multiple variables",
+        "correct": true
+      },
+      {
+        "text": "it is possible to use only on computers with common memory",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "what are the sequence of actions in interrupt handling?",
+    "answers": [
+      {
+        "text": "saving a copy of the interrupt vector (pc and sr)",
+        "correct": true
+      },
+      {
+        "text": "switching to system mode (modification of pc and status register)",
+        "correct": true
+      },
+      {
+        "text": "programmatic context saving",
+        "correct": true
+      },
+      {
+        "text": "switching to the system stack",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "in the philosophers problem, if there are 4 of them:",
+    "answers": [
+      {
+        "text": "deadlock is not possible",
+        "correct": false
+      },
+      {
+        "text": "starvation is not possible",
+        "correct": true
+      },
+      {
+        "text": "starvation is possible",
+        "correct": false
+      },
+      {
+        "text": "deadlock is possible",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "after accepting an interrupt, the next interrupts are:",
+    "answers": [
+      {
+        "text": "unblocked",
+        "correct": false
+      },
+      {
+        "text": "partly blocked, partly unblocked, according to the level of the accepted interrupt",
+        "correct": false
+      },
+      {
+        "text": "blocked",
+        "correct": true
+      },
+      {
+        "text": "some blocked, some unblocked, developer decides",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "how is exception identification performed?",
+    "answers": [
+      {
+        "text": "the specification of hardware interrupts is given over the data bus",
+        "correct": true
+      },
+      {
+        "text": "all exceptions are specified using the data bus",
+        "correct": false
+      },
+      {
+        "text": "the specification of hardware interrupts and traps is given over the data bus",
+        "correct": false
+      },
+      {
+        "text": "the specification of hardware interrupts and errors is given over the data bus",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "the process context includes:",
+    "answers": [
+      {
+        "text": "general purpose registers",
+        "correct": true
+      },
+      {
+        "text": "process descriptor",
+        "correct": false
+      },
+      {
+        "text": "external devices registers",
+        "correct": false
+      },
+      {
+        "text": "the content of the file containing the program",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "when an exception is raised in user mode, the operating system switches to the kernel system stack, and what happens when an exception is raised in system mode?",
+    "answers": [
+      {
+        "text": "initializes the kernel system stack from the scratch",
+        "correct": false
+      },
+      {
+        "text": "switches back to the application program stack",
+        "correct": false
+      },
+      {
+        "text": "nothing special, it builds the context on the kernel system stack",
+        "correct": true
+      },
+      {
+        "text": "switches to the next kernel system stack",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "at the suspended state is a process that:",
+    "answers": [
+      {
+        "text": "fills the processor idle time",
+        "correct": false
+      },
+      {
+        "text": "waits for the processor",
+        "correct": false
+      },
+      {
+        "text": "occupation and processor",
+        "correct": false
+      },
+      {
+        "text": "waits for an i/o operation to complete",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "at the blocked state is a process that:",
+    "answers": [
+      {
+        "text": "occupations and processor",
+        "correct": false
+      },
+      {
+        "text": "waits for a processor",
+        "correct": false
+      },
+      {
+        "text": "waits for an i/o operation to complete",
+        "correct": true
+      },
+      {
+        "text": "fills the processor idle time",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "operation v on a raised binary semaphore:",
+    "answers": [
+      {
+        "text": "it does not change the value of the semaphore",
+        "correct": true
+      },
+      {
+        "text": "it is stored in order to be able to perform as many operations p as there were v",
+        "correct": false
+      },
+      {
+        "text": "increases semaphore value by 1",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "individual interrupt mask:",
+    "answers": [
+      {
+        "text": "a register whose bits are anded (conjunction) with the bits from the interrupt request register",
+        "correct": true
+      },
+      {
+        "text": "a combinational circuit that calculates the number of the interrupt received",
+        "correct": false
+      },
+      {
+        "text": "register in which addresses of devices reporting individual interrupts are stored",
+        "correct": false
+      },
+      {
+        "text": "a register whose bits are ored (alternative) with the bits from the interrupt request register",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "scheduling algorithms can be:",
+    "answers": [
+      {
+        "text": "preemptive",
+        "correct": true
+      },
+      {
+        "text": "term changing",
+        "correct": false
+      },
+      {
+        "text": "interrupting",
+        "correct": false
+      },
+      {
+        "text": "indulgent",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "the optimal scheduling algorithm in terms of minimizing the average time in the system of a given task is:",
+    "answers": [
+      {
+        "text": "fcfs",
+        "correct": false
+      },
+      {
+        "text": "time slicing",
+        "correct": false
+      },
+      {
+        "text": "sjf",
+        "correct": true
+      },
+      {
+        "text": "priority",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "sequence of actions when starting a new task:",
+    "answers": [
+      {
+        "text": "filling in the descriptor in the kernel - 1",
+        "correct": true
+      },
+      {
+        "text": "memory allocation if this is the first task of the program - 2",
+        "correct": true
+      },
+      {
+        "text": "initialize the stack, fill the first frame - 3",
+        "correct": true
+      },
+      {
+        "text": "instruction to transfer control to the task - 4",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "which of the following applies to user-level threads?",
+    "answers": [
+      {
+        "text": "user-level threads require their descriptors in the kernel",
+        "correct": false
+      },
+      {
+        "text": "user-level threads can themselves be multi-threaded",
+        "correct": false
+      },
+      {
+        "text": "user-level threads cost no execution time in system mode",
+        "correct": true
+      },
+      {
+        "text": "the organization of user-level threads is specific to the operating system",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "interrupt handling - sequence of actions:",
+    "answers": [
+      {
+        "text": "saving a copy of the interrupt vector (pc and sr) - 1",
+        "correct": true
+      },
+      {
+        "text": "switching to system mode (modification of pc and status register) - 2",
+        "correct": true
+      },
+      {
+        "text": "programmatic context saving - 3",
+        "correct": true
+      },
+      {
+        "text": "switching to the system stack - 3",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "what mechanism is used to preserve the states of preempted tasks?",
+    "answers": [
+      {
+        "text": "context switch",
+        "correct": true
+      },
+      {
+        "text": "task period",
+        "correct": false
+      },
+      {
+        "text": "time slice",
+        "correct": false
+      },
+      {
+        "text": "batch work",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "semaphore function is to:",
+    "answers": [
+      {
+        "text": "process scheduling",
+        "correct": false
+      },
+      {
+        "text": "memory management",
+        "correct": false
+      },
+      {
+        "text": "synchronize critical resources to prevent deadlock",
+        "correct": true
+      },
+      {
+        "text": "synchronize processes for better cpu utilization",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "what is the average time in the system for tasks in the batch, using sjf algorithm? the system is equipped with 2 processors",
+    "answers": [
+      {
+        "text": "4",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "what is the average time in the system for tasks in the batch, using sjf algorithm? the system is equipped with 4 processors",
+    "answers": [
+      {
+        "text": "3.4",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "which mechanism is a part of time-sharing systems?",
+    "answers": [
+      {
+        "text": "short-term scheduler",
+        "correct": true
+      },
+      {
+        "text": "no scheduler is needed",
+        "correct": false
+      },
+      {
+        "text": "long-term scheduler",
+        "correct": false
+      },
+      {
+        "text": "medium-term scheduler",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "interrupt handling - sequence of actions:",
+    "answers": [
+      {
+        "text": "1. → saving a copy of the interrupt vector (pc and sr)",
+        "correct": true
+      },
+      {
+        "text": "2. → switching to system mode (modification of pc and status register)",
+        "correct": true
+      },
+      {
+        "text": "3. → programmatic context saving",
+        "correct": true
+      },
+      {
+        "text": "4. → switching to the system stack",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "what mechanism is used to preserve the states of preempted tasks?",
+    "answers": [
+      {
+        "text": "context switch",
+        "correct": true
+      },
+      {
+        "text": "task period",
+        "correct": false
+      },
+      {
+        "text": "time slice",
+        "correct": false
+      },
+      {
+        "text": "batch work",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "when the processor is released, the scheduler selects one of the queued processes:",
+    "answers": [
+      {
+        "text": "suspended",
+        "correct": false
+      },
+      {
+        "text": "running",
+        "correct": false
+      },
+      {
+        "text": "waiting",
+        "correct": false
+      },
+      {
+        "text": "ready",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "which scheduler is also called a job planner?",
+    "answers": [
+      {
+        "text": "short-term",
+        "correct": false
+      },
+      {
+        "text": "auxiliary",
+        "correct": false
+      },
+      {
+        "text": "medium-term",
+        "correct": false
+      },
+      {
+        "text": "long-term",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "semaphore function is to:",
+    "answers": [
+      {
+        "text": "process scheduling",
+        "correct": false
+      },
+      {
+        "text": "memory management",
+        "correct": false
+      },
+      {
+        "text": "synchronize critical resources to prevent deadlock",
+        "correct": true
+      },
+      {
+        "text": "synchronize processes for better cpu utilization",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "what is the average time in the system for tasks in the batch, using sjf algorithm? the system is equipped with 2 processors",
+    "answers": [
+      {
+        "text": "4",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "what is the average time in the system for tasks in the batch, using sjf algorithm? the system is equipped with 4 processors",
+    "answers": [
+      {
+        "text": "3.4",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "scheduling aims to optimize:",
+    "answers": [
+      {
+        "text": "processor utilization",
+        "correct": true
+      },
+      {
+        "text": "system throughput",
+        "correct": true
+      },
+      {
+        "text": "wait time",
+        "correct": true
+      },
+      {
+        "text": "reaction time",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "interrupt handling - sequence of actions:",
+    "answers": [
+      {
+        "text": "1. → saving a copy of the interrupt vector (pc and sr)",
+        "correct": true
+      },
+      {
+        "text": "2. → switching to system mode (modification of pc and status register)",
+        "correct": true
+      },
+      {
+        "text": "3. → programmatic context saving",
+        "correct": true
+      },
+      {
+        "text": "4. → switching to the system stack",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "what mechanism is used to preserve the states of preempted tasks?",
+    "answers": [
+      {
+        "text": "context switch",
+        "correct": true
+      },
+      {
+        "text": "task period",
+        "correct": false
+      },
+      {
+        "text": "time slice",
+        "correct": false
+      },
+      {
+        "text": "batch work",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "semaphore function is to:",
+    "answers": [
+      {
+        "text": "process scheduling",
+        "correct": false
+      },
+      {
+        "text": "memory management",
+        "correct": false
+      },
+      {
+        "text": "synchronize critical resources to prevent deadlock",
+        "correct": true
+      },
+      {
+        "text": "synchronize processes for better cpu utilization",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "what is the average time in the system for tasks in the batch, using sjf algorithm? the system is equipped with 2 processors",
+    "answers": [
+      {
+        "text": "4",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "the multi-level interrupt controller includes:",
+    "answers": [
+      {
+        "text": "collective interrupt mask",
+        "correct": true
+      },
+      {
+        "text": "priority encoder",
+        "correct": true
+      },
+      {
+        "text": "individual interrupt mask",
+        "correct": true
+      },
+      {
+        "text": "the register of interrupt being serviced",
+        "correct": false
+      },
+      {
+        "text": "interrupt request register",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "what is the average time in the system for tasks in the batch, using sjf algorithm? the system is equipped with 4 processors",
+    "answers": [
+      {
+        "text": "3.4",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "the number of condition variables is by definition in the monitor:",
+    "answers": [
+      {
+        "text": "two",
+        "correct": false
+      },
+      {
+        "text": "one",
+        "correct": false
+      },
+      {
+        "text": "as many as there are different conditions for the continuation of processes",
+        "correct": true
+      },
+      {
+        "text": "as many as there are different conditions for the continuation of processes plus one for mutual exclusion",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "the following situations trigger \"error\" exceptions:",
+    "answers": [
+      {
+        "text": "attempting to execute an illegal instruction",
+        "correct": true
+      },
+      {
+        "text": "attempting to execute in user mode an instruction that is only legal in system mode",
+        "correct": true
+      },
+      {
+        "text": "page fault (also known as frame fault, frame error, page miss)",
+        "correct": false
+      },
+      {
+        "text": "extracode",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "using the test-and-set instruction in synchronization:",
+    "answers": [
+      {
+        "text": "it requires processes to actively wait",
+        "correct": true
+      },
+      {
+        "text": "requires organizing inactive waiting in queues",
+        "correct": false
+      },
+      {
+        "text": "stops the processor if io is read",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "during the interrupt handling:",
+    "answers": [
+      {
+        "text": "other interrupts can be accepted",
+        "correct": false
+      },
+      {
+        "text": "other interrupts may or may not be accepted at the discretion of the programmer",
+        "correct": true
+      },
+      {
+        "text": "other interrupts are disabled",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "what is the average time in the system for tasks in the batch, using sjf algorithm? the system is equipped with 3 processors",
+    "answers": [
+      {
+        "text": "4.1",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "what mechanism is used to save and restore the task state?",
+    "answers": [
+      {
+        "text": "context switch",
+        "correct": true
+      },
+      {
+        "text": "task descriptor",
+        "correct": false
+      },
+      {
+        "text": "applications counter",
+        "correct": false
+      },
+      {
+        "text": "scheduling data",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "the following situations trigger \"error\" exceptions:",
+    "answers": [
+      {
+        "text": "a reference to memory that is not in the program address space",
+        "correct": true
+      },
+      {
+        "text": "memory reference in the area of the page that is not in memory",
+        "correct": false
+      },
+      {
+        "text": "an attempt to execute an instruction from the area of the page for which the 'no code' bit was set",
+        "correct": true
+      },
+      {
+        "text": "memory reference beyond limit register value",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "semaphores are used to solve the problem:",
+    "answers": [
+      {
+        "text": "belady problem",
+        "correct": false
+      },
+      {
+        "text": "races",
+        "correct": false
+      },
+      {
+        "text": "process scheduling",
+        "correct": false
+      },
+      {
+        "text": "mutual exclusion",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "what is the average time in the system for tasks in the batch, using sjf algorithm? the system is equipped with 2 processors",
+    "answers": [
+      {
+        "text": "4.4",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "what exception (software or hardware interrupt) causes system mode if user mode is current?",
+    "answers": [
+      {
+        "text": "any exception",
+        "correct": true
+      },
+      {
+        "text": "it depends what type of exception",
+        "correct": false
+      },
+      {
+        "text": "synchronous yes, asynchronous no",
+        "correct": false
+      },
+      {
+        "text": "no exception",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "the difference between trap and error is:",
+    "answers": [
+      {
+        "text": "there is no significant difference",
+        "correct": false
+      },
+      {
+        "text": "the error is issued by hardware and the trap by software",
+        "correct": false
+      },
+      {
+        "text": "errors are generally reported asynchronously and traps synchronously",
+        "correct": true
+      },
+      {
+        "text": "after an error, there is usually no return to the program, and after a trap, yes",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "how does the operating system call the task completion subroutine?",
+    "answers": [
+      {
+        "text": "recreates the context programmatically and executes the iret instruction - 2",
+        "correct": true
+      },
+      {
+        "text": "sets the trace in the terminating subroutine to the current position - 2",
+        "correct": true
+      },
+      {
+        "text": "builds an interrupt vector on the system stack pointing to the terminating subroutine code - 3",
+        "correct": true
+      },
+      {
+        "text": "builds the frame of the terminating subroutine on the task stack - 1",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "what mechanism is part of time-sharing systems?",
+    "answers": [
+      {
+        "text": "swapping",
+        "correct": false
+      },
+      {
+        "text": "medium-term scheduler",
+        "correct": false
+      },
+      {
+        "text": "long-term scheduler",
+        "correct": false
+      },
+      {
+        "text": "short-term scheduler",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "in the 'current' state, there is a process that:",
+    "answers": [
+      {
+        "text": "fills the cpu idle time",
+        "correct": false
+      },
+      {
+        "text": "waits for a processor",
+        "correct": false
+      },
+      {
+        "text": "occupies a processor",
+        "correct": true
+      },
+      {
+        "text": "waits for an i/o operation to complete",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "at the ready state is a process that:",
+    "answers": [
+      {
+        "text": "waits for an i/o operation to complete",
+        "correct": false
+      },
+      {
+        "text": "waits for a processor",
+        "correct": true
+      },
+      {
+        "text": "occupies a processor",
+        "correct": false
+      },
+      {
+        "text": "fills the processor idle time",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "a process can appear in the pool of scheduling processes as a result of:",
+    "answers": [
+      {
+        "text": "starting a new process",
+        "correct": true
+      },
+      {
+        "text": "performing the p operation on the semaphore",
+        "correct": false
+      },
+      {
+        "text": "performing v operation on the semaphore",
+        "correct": true
+      },
+      {
+        "text": "completing an i/o operation",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "in a multiprocessor operating system, interrupt blocking is sufficient to prevent the microkernel from executing its routines simultaneously:",
+    "answers": [
+      {
+        "text": "true",
+        "correct": false
+      },
+      {
+        "text": "false",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "twice consecutive execution in one process of operation p on a raised binary semaphore:",
+    "answers": [
+      {
+        "text": "causes the semaphore to get down",
+        "correct": true
+      },
+      {
+        "text": "it doesn’t change anything",
+        "correct": false
+      },
+      {
+        "text": "decreases semaphore value by 2",
+        "correct": false
+      },
+      {
+        "text": "if a semaphore guards a critical region, it leads to a deadlock",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "what is true for simultaneous execution in the same context?",
+    "answers": [
+      {
+        "text": "a multiprocessor kernel can be concurrent",
+        "correct": true
+      },
+      {
+        "text": "the shared context forces threads to run on the same processor",
+        "correct": false
+      },
+      {
+        "text": "the use of threads ensures concurrency within the process",
+        "correct": true
+      },
+      {
+        "text": "threads minimize context switch time",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "devices report their readiness by:",
+    "answers": [
+      {
+        "text": "issuing an interrupt",
+        "correct": true
+      },
+      {
+        "text": "unblocking the interrupts",
+        "correct": false
+      },
+      {
+        "text": "system call",
+        "correct": false
+      },
+      {
+        "text": "setting a status bit",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "what is the average time in the system for tasks in the batch, using sjf algorithm? the system is equipped with 2 processors",
+    "answers": [
+      {
+        "text": "4.3",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "what is true about system level threads?",
+    "answers": [
+      {
+        "text": "all process threads can share the same set of child processes",
+        "correct": true
+      },
+      {
+        "text": "all process threads share the same address space",
+        "correct": true
+      },
+      {
+        "text": "all process threads can share the same set of open files",
+        "correct": true
+      },
+      {
+        "text": "thread switching does not require interaction with the operating system",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "which of the following information is stored on task switching?",
+    "answers": [
+      {
+        "text": "contents of general purpose registers, program counter, and similar registers available to the program",
+        "correct": true
+      },
+      {
+        "text": "contents of the instruction register and similar registers",
+        "correct": false
+      },
+      {
+        "text": "scheduler data",
+        "correct": true
+      },
+      {
+        "text": "i/o status information",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "context switch is caused by:",
+    "answers": [
+      {
+        "text": "relocation",
+        "correct": false
+      },
+      {
+        "text": "input/output operations",
+        "correct": false
+      },
+      {
+        "text": "paging",
+        "correct": false
+      },
+      {
+        "text": "interrupts",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "the return from interrupt instruction:",
+    "answers": [
+      {
+        "text": "restores general purpose registers",
+        "correct": false
+      },
+      {
+        "text": "restores the stack pointer",
+        "correct": false
+      },
+      {
+        "text": "restores the interrupt vector",
+        "correct": true
+      },
+      {
+        "text": "always jumps to the process that was interrupted",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "the interrupt acceptance sequence consists of (in the sequence):",
+    "answers": [
+      {
+        "text": "identification of the interrupt level, performing a jump with the trace according to the interrupt table, saving the interrupt vector",
+        "correct": false
+      },
+      {
+        "text": "identification of the interrupt level, saving the interrupt vector, performing a jump with a trace according to the interrupt table",
+        "correct": true
+      },
+      {
+        "text": "identification of the interrupt level, performing a jump according to the interrupt table, saving the interrupt vector",
+        "correct": false
+      },
+      {
+        "text": "identification of the interrupt level, saving the interrupt vector, performing a jump according to the interrupt table",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "the thread is also called:",
+    "answers": [
+      {
+        "text": "overlay process",
+        "correct": false
+      },
+      {
+        "text": "heavy process",
+        "correct": false
+      },
+      {
+        "text": "lightweight process",
+        "correct": true
+      },
+      {
+        "text": "data process",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "imprecise interrupts are:",
+    "answers": [
+      {
+        "text": "they are unblocked in any state of the processor, not just between executions of instructions",
+        "correct": false
+      },
+      {
+        "text": "they are transferred in any state of the processor, not just between the execution of successive instructions",
+        "correct": false
+      },
+      {
+        "text": "they are accepted in any state of the processor, not just between the execution of successive instructions",
+        "correct": true
+      },
+      {
+        "text": "they are issued in any state of the processor, not just between the execution of successive instructions",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "the kernel is _______ user-level threads.",
+    "answers": [
+      {
+        "text": "creator",
+        "correct": false
+      },
+      {
+        "text": "unaware",
+        "correct": true
+      },
+      {
+        "text": "aware",
+        "correct": false
+      },
+      {
+        "text": "part",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "the result of cooperation of concurrent processes:",
+    "answers": [
+      {
+        "text": "it can be non-deterministic",
+        "correct": true
+      },
+      {
+        "text": "it may depend on how processes are scheduled",
+        "correct": true
+      },
+      {
+        "text": "it is always deterministic",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "which of the following statements is true for system level threads?",
+    "answers": [
+      {
+        "text": "user-level threads can be synchronized by the kernel",
+        "correct": false
+      },
+      {
+        "text": "multithreaded applications cannot use multiprocessing",
+        "correct": false
+      },
+      {
+        "text": "kernel-level threads require their descriptors in the kernel",
+        "correct": true
+      },
+      {
+        "text": "the threading implementation at the kernel level is done by the thread library attached to the program",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "the following situations cause \"error\" exceptions (processor internal interrupts)",
+    "answers": [
+      {
+        "text": "extracode",
+        "correct": false
+      },
+      {
+        "text": "instruction legal but prohibited in user mode",
+        "correct": true
+      },
+      {
+        "text": "illegal instruction",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "cloning a process with a fork operation results in (not taking to account the numerical result of fork)?",
+    "answers": [
+      {
+        "text": "duplication of code, data and stack segments",
+        "correct": false
+      },
+      {
+        "text": "duplication of data segment and stack segment",
+        "correct": true
+      },
+      {
+        "text": "duplication of code segment, initialization of new data segment and stack segment",
+        "correct": false
+      }
+    ]
+  }
+]

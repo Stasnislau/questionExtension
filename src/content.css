@@ -1,0 +1,36 @@
+.found-question::-webkit-scrollbar {
+    width: 0.2rem;
+    height: 0.2rem;
+  }
+  
+  .found-question::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .found-question::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 0.5rem;
+  }
+  
+  .found-question::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+  .no-data-message::-webkit-scrollbar {
+    width: 0.2rem;
+    height: 0.2rem;
+  }
+  
+  .no-data-message::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .no-data-message::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 0.5rem;
+  }
+  
+  .no-data-message::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  

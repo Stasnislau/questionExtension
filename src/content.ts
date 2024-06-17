@@ -1,4 +1,6 @@
 import questions from "./questions.json";
+import "./content.css";
+import levenshtein from "./assets/levenshtein";
 
 interface Question {
   question: string;
@@ -11,29 +13,34 @@ interface Option {
 
 const GetQuestionFromPage = () => {
   const potentialQuestionElements = document.getElementsByClassName("qtext");
+  if (potentialQuestionElements.length === 0) {
+    return "";
+  }
   const questionTextElement = potentialQuestionElements[0];
-  let questionText = questionTextElement?.textContent?.trim();
-  console.log(questionText);
+  let questionText = questionTextElement?.textContent?.trim().toLowerCase();
   return questionText;
 };
 
 const getOptionsFromPage = (): Option[] => {
   const potentialAnswerElements =
     document.querySelectorAll(".answer .d-flex p");
+  if (potentialAnswerElements.length === 0) {
+    return [];
+  }
   const options = Array.from(potentialAnswerElements).map((el) => ({
-    text: el.textContent?.trim() || "",
+    text: el.textContent?.trim().toLowerCase() || "",
     element: el as HTMLElement,
   }));
   return options;
 };
 
-const markQuestions = (questions: Question[]) => {
+const markQuestions = (questions: Question[], isBackground = true) => {
   const questionText = GetQuestionFromPage();
   const options = getOptionsFromPage();
 
   if (questionText) {
     const matchingQuestion = questions.find((q) =>
-      questionText.includes(q.question)
+      levenshtein(q.question, questionText) < 3
     );
     if (matchingQuestion) {
       displayFoundQuestion(
@@ -41,19 +48,23 @@ const markQuestions = (questions: Question[]) => {
         matchingQuestion.answers.filter((a) => a.correct).map((a) => a.text)
       );
       options.forEach((option) => {
-        // find the option, if it is correct, mark it as correct, if not, mark it as incorrect, if it is not in the list, mark with a warning
-        console.log(option.text);
         const matchingAnswer = matchingQuestion.answers.find(
-          (a) => a.text === option.text
+          (a) => levenshtein(a.text, option.text) < 3
         );
         if (matchingAnswer) {
           if (matchingAnswer.correct) {
-            option.element.style.backgroundColor = "green";
+            isBackground
+              ? (option.element.style.backgroundColor = "#90ee90")
+              : (option.element.style.borderBottom = "2px solid green");
           } else {
-            option.element.style.backgroundColor = "red";
+            isBackground
+              ? (option.element.style.backgroundColor = "#FF5733")
+              : (option.element.style.borderBottom = "2px solid red");
           }
         } else {
-          option.element.style.backgroundColor = "yellow";
+          isBackground
+            ? (option.element.style.backgroundColor = "#FFFDE1")
+            : (option.element.style.borderBottom = "2px solid #FFFDE1");
         }
       });
     } else {
@@ -71,7 +82,8 @@ const displayNoDataMessage = (question: string) => {
     top: "10%",
     right: "10%",
     width: "150px",
-    height: "100px",
+    maxHeight: "200px",
+    overflowY: "auto",
     backgroundColor: "gray",
     borderRadius: "5px",
     border: "1px solid black",
@@ -80,6 +92,19 @@ const displayNoDataMessage = (question: string) => {
     padding: "10px",
     zIndex: "100000",
   });
+  const closeButton = document.createElement("button");
+  closeButton.textContent = "X";
+  closeButton.style.position = "absolute";
+  closeButton.style.top = "0";
+  closeButton.style.right = "0";
+  closeButton.style.backgroundColor = "red";
+  closeButton.style.color = "white";
+  closeButton.style.border = "none";
+  closeButton.style.borderRadius = "5px";
+  closeButton.style.cursor = "pointer";
+  closeButton.addEventListener("click", () => message.remove());
+  message.appendChild(closeButton);
+
   document.body.appendChild(message);
 };
 
@@ -93,7 +118,8 @@ const displayFoundQuestion = (question: string, correctOptions: string[]) => {
     top: "10%",
     left: "10%",
     width: "150px",
-    height: "auto",
+    maxHeight: "200px",
+    overflowY: "auto",
     backgroundColor: "#f0f0f0",
     borderRadius: "5px",
     fontSize: "0.8rem",
@@ -103,6 +129,19 @@ const displayFoundQuestion = (question: string, correctOptions: string[]) => {
     padding: "10px",
     zIndex: "100000",
   });
+
+  const closeButton = document.createElement("button");
+  closeButton.textContent = "X";
+  closeButton.style.position = "absolute";
+  closeButton.style.top = "0";
+  closeButton.style.right = "0";
+  closeButton.style.backgroundColor = "red";
+  closeButton.style.color = "white";
+  closeButton.style.border = "none";
+  closeButton.style.borderRadius = "5px";
+  closeButton.style.cursor = "pointer";
+  closeButton.addEventListener("click", () => message.remove());
+  message.appendChild(closeButton);
   const h3 = document.createElement("h3");
   h3.textContent = "Correct options:";
   h3.style.marginBottom = "5px";
@@ -135,13 +174,29 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
       const options = getOptionsFromPage();
       options.forEach((option) => {
         option.element.style.backgroundColor = "";
+        option.element.style.borderBottom = "";
       });
     }
   }
 });
 
-chrome.storage.sync.get(["isEnabled"], (result) => {
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.isBackground !== undefined && request.isEnabled) {
+    const options = getOptionsFromPage();
+    options.forEach((option) => {
+      option.element.style.backgroundColor = "";
+      option.element.style.borderBottom = "";
+    });
+    if (request.isBackground) {
+      markQuestions(questions, true);
+    } else {
+      markQuestions(questions, false);
+    }
+  }
+});
+
+chrome.storage.sync.get(["isEnabled", "isBackground"], (result) => {
   if (result.isEnabled) {
-    markQuestions(questions);
+    markQuestions(questions, result.isBackground);
   }
 });
