@@ -39,8 +39,8 @@ const markQuestions = (questions: Question[], isBackground = true) => {
   const options = getOptionsFromPage();
 
   if (questionText) {
-    const matchingQuestion = questions.find((q) =>
-      levenshtein(q.question, questionText) < 3
+    const matchingQuestion = questions.find(
+      (q) => levenshtein(q.question, questionText) < 3
     );
     if (matchingQuestion) {
       displayFoundQuestion(
@@ -55,11 +55,11 @@ const markQuestions = (questions: Question[], isBackground = true) => {
           if (matchingAnswer.correct) {
             isBackground
               ? (option.element.style.backgroundColor = "#90ee90")
-              : (option.element.style.borderBottom = "2px solid green");
+              : (option.element.style.borderBottom = "2px solid #bdd5ff");
           } else {
             isBackground
               ? (option.element.style.backgroundColor = "#FF5733")
-              : (option.element.style.borderBottom = "2px solid red");
+              : (option.element.style.borderBottom = "2px solid #E6E6E6");
           }
         } else {
           isBackground
@@ -97,7 +97,7 @@ const displayNoDataMessage = (question: string) => {
   closeButton.style.position = "absolute";
   closeButton.style.top = "0";
   closeButton.style.right = "0";
-  closeButton.style.backgroundColor = "red";
+  closeButton.style.backgroundColor = "#E6E6E6";
   closeButton.style.color = "white";
   closeButton.style.border = "none";
   closeButton.style.borderRadius = "5px";
@@ -135,7 +135,7 @@ const displayFoundQuestion = (question: string, correctOptions: string[]) => {
   closeButton.style.position = "absolute";
   closeButton.style.top = "0";
   closeButton.style.right = "0";
-  closeButton.style.backgroundColor = "red";
+  closeButton.style.backgroundColor = "#E6E6E6";
   closeButton.style.color = "white";
   closeButton.style.border = "none";
   closeButton.style.borderRadius = "5px";
