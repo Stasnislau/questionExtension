@@ -1788,27 +1788,6 @@
     ]
   },
   {
-    "question": "what mechanism is part of batch systems?",
-    "answers": [
-      {
-        "text": "medium-term scheduler",
-        "correct": true
-      },
-      {
-        "text": "no scheduler is needed",
-        "correct": false
-      },
-      {
-        "text": "long-term scheduler",
-        "correct": true
-      },
-      {
-        "text": "short-term scheduler",
-        "correct": false
-      }
-    ]
-  },
-  {
     "question": "the test-and-set or compare-and-swap instruction has the following characteristics:",
     "answers": [
       {
@@ -1930,27 +1909,6 @@
       },
       {
         "text": "the content of the file containing the program",
-        "correct": false
-      }
-    ]
-  },
-  {
-    "question": "when an exception is raised in user mode, the operating system switches to the kernel system stack, and what happens when an exception is raised in system mode?",
-    "answers": [
-      {
-        "text": "initializes the kernel system stack from the scratch",
-        "correct": false
-      },
-      {
-        "text": "switches back to the application program stack",
-        "correct": false
-      },
-      {
-        "text": "nothing special, it builds the context on the kernel system stack",
-        "correct": true
-      },
-      {
-        "text": "switches to the next kernel system stack",
         "correct": false
       }
     ]
@@ -3096,6 +3054,27 @@
       },
       {
         "text": "duplication of code segment, initialization of new data segment and stack segment",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "the mechanism for moving programs between primary memory and mass storage is called:",
+    "answers": [
+      {
+        "text": "sweeping",
+        "correct": true
+      },
+      {
+        "text": "leaching",
+        "correct": false
+      },
+      {
+        "text": "swapping",
+        "correct": false
+      },
+      {
+        "text": "leading out",
         "correct": false
       }
     ]
