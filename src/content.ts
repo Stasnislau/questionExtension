@@ -55,11 +55,11 @@ const markQuestions = (questions: Question[], isBackground = true) => {
           if (matchingAnswer.correct) {
             isBackground
               ? (option.element.style.backgroundColor = "#90ee90")
-              : (option.element.style.borderBottom = "2px solid #bdd5ff");
+              : (option.element.style.borderBottom = "2px solid #A8E4A0");
           } else {
             isBackground
               ? (option.element.style.backgroundColor = "#FF5733")
-              : (option.element.style.borderBottom = "2px solid #E6E6E6");
+              : (option.element.style.borderBottom = "2px solid #C41E3A");
           }
         } else {
           isBackground
@@ -163,13 +163,13 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.isEnabled) {
       markQuestions(questions);
     } else {
-      const noDataMessage = document.querySelector(".no-data-message");
-      const foundQuestion = document.querySelector(".found-question");
-      if (noDataMessage) {
-        noDataMessage.remove();
+      const noDataMessages = document.querySelectorAll(".no-data-message");
+      const foundQuestions = document.querySelectorAll(".found-question");
+      if (noDataMessages && noDataMessages.length > 0) {
+        noDataMessages.forEach((message) => message.remove());
       }
-      if (foundQuestion) {
-        foundQuestion.remove();
+      if (foundQuestions && foundQuestions.length > 0) {
+        foundQuestions.forEach((message) => message.remove());
       }
       const options = getOptionsFromPage();
       options.forEach((option) => {
