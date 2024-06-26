@@ -10765,8 +10765,12 @@
   },
   {
     "question": "The algorithm in which the most recently used page is swapped out is called (enter the abbreviation if applicable):",
-    "answers": [],
-    "answer": "LRU"
+    "answers": [
+      {
+        "text": "LRU",
+        "correct": true
+      }
+    ]
   },
   {
     "question": "Discontinuous allocation is the result of:",
@@ -11085,11 +11089,23 @@
   },
   {
     "question": "Sequence of actions when starting a new task:",
-    "steps": [
-      "filling in the descriptor in the kernel",
-      "memory allocation if this is the first task of the program",
-      "initialize the stack, fill the first frame",
-      "instruction to transfer control to the task"
+    "answers": [
+      {
+        "text": "filling in the descriptor in the kernel",
+        "correct": true
+      },
+      {
+        "text": "memory allocation if this is the first task of the program",
+        "correct": true
+      },
+      {
+        "text": "initialize the stack, fill the first frame",
+        "correct": true
+      },
+      {
+        "text": "instruction to transfer control to the task",
+        "correct": true
+      }
     ]
   },
   {
@@ -11646,22 +11662,18 @@
     "question": "Interrupt handling - sequence of actions:",
     "answers": [
       {
-        "order": 1,
         "text": "saving a copy of the interrupt vector (PC and SR)",
         "correct": true
       },
       {
-        "order": 2,
         "text": "switching to system mode (modification of PC and status register)",
         "correct": true
       },
       {
-        "order": 3,
         "text": "programmatic context saving",
         "correct": true
       },
       {
-        "order": 4,
         "text": "switching to the system stack",
         "correct": true
       }
@@ -14453,20 +14465,29 @@
   },
   {
     "question": "What is the average time in the system for tasks in the batch, using SJF algorithm?",
-    "answers": [],
-    "response": "7.125",
-    "feedback": "Poprawna odpowiedź to: 7,1"
+    "answers": [
+      {
+        "text": "7.125",
+        "correct": true
+      }
+    ]
   },
   {
     "question": "In RAID 4, data is placed in Strips that are \"scattered\" over the data disks...",
-    "answers": [],
-    "response": "1,1,0,0,0",
-    "feedback": "Poprawna odpowiedź to: 11000"
+    "answers": [
+      {
+        "text": "1,1,0,0,0",
+        "correct": true
+      }
+    ]
   },
   {
     "question": "The virtual address consists of 8b page number and 8b offset. The page index table is shown below...",
-    "answers": [],
-    "response": "7.144",
-    "feedback": "Poprawna odpowiedź to: 7,144"
+    "answers": [
+      {
+        "text": "7.144",
+        "correct": true
+      }
+    ]
   }
 ]
