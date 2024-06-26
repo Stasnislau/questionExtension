@@ -9,7 +9,6 @@ const App: React.FC = () => {
       setIsEnabled(result.isEnabled || false);
     });
   }, []);
-
   useEffect(() => {
     chrome.storage.sync.get(['isBackground'], (result) => {
       setIsBackground(result.isBackground || false);

@@ -39,9 +39,21 @@ const markQuestions = (questions: Question[], isBackground = true) => {
   const options = getOptionsFromPage();
 
   if (questionText) {
-    const matchingQuestion = questions.find(
+    const matchingQuestions = questions.filter(
       (q) => levenshtein(q.question, questionText) < 3
     );
+    const answers = [] as { text: string; correct: boolean }[];
+    for (const question of matchingQuestions) {
+      for (const answer of question.answers) {
+        if (!answers.some((a) => a.text === answer.text)) {
+          answers.push(answer);
+        }
+      }
+    }
+    const matchingQuestion = {
+      question: matchingQuestions[0]?.question,
+      answers: answers,
+    };
     if (matchingQuestion) {
       displayFoundQuestion(
         matchingQuestion.question,
@@ -196,6 +208,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 });
 
 chrome.storage.sync.get(["isEnabled", "isBackground"], (result) => {
+  console.log(questions.length);
   if (result.isEnabled) {
     markQuestions(questions, result.isBackground);
   }
