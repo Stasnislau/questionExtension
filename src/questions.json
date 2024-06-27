@@ -10634,7 +10634,7 @@
     ]
   },
   {
-    "question": "What does it mean that the interrupt subsystem is vectored (all components of the correct answer must be given)?",
+    "question": "what does it mean that the interrupt subsystem is vectored (all components of the correct answer must be given)?",
     "answers": [
       {
         "text": "there is an individual interrupt mask",
@@ -10655,7 +10655,7 @@
     ]
   },
   {
-    "question": "In round-robin scheduling, if each task is allotted a certain amount of time to execute, it is called:",
+    "question": "in round-robin scheduling, if each task is allotted a certain amount of time to execute, it is called:",
     "answers": [
       {
         "text": "time slice",
@@ -10676,7 +10676,7 @@
     ]
   },
   {
-    "question": "Which mechanisms are supported by the phenomenon of locality of references?",
+    "question": "which mechanisms are supported by the phenomenon of locality of references?",
     "answers": [
       {
         "text": "address translation",
@@ -10701,28 +10701,28 @@
     ]
   },
   {
-    "question": "Internal fragmentation consists in:",
+    "question": "internal fragmentation consists in:",
     "answers": [
       {
-        "text": "Dividing the memory allocated to the program into a data area and a code area",
+        "text": "dividing the memory allocated to the program into a data area and a code area",
         "correct": false
       },
       {
-        "text": "Free memory blocks between allocated blocks",
+        "text": "free memory blocks between allocated blocks",
         "correct": false
       },
       {
-        "text": "Discontinuous program memory allocation",
+        "text": "discontinuous program memory allocation",
         "correct": false
       },
       {
-        "text": "The program does not use all the memory allocated to it",
+        "text": "the program does not use all the memory allocated to it",
         "correct": true
       }
     ]
   },
   {
-    "question": "Which of the following are affected by the thrashing phenomenon?",
+    "question": "which of the following are affected by the thrashing phenomenon?",
     "answers": [
       {
         "text": "program structure",
@@ -10743,37 +10743,37 @@
     ]
   },
   {
-    "question": "Which mechanism is a part of Time-sharing systems?",
+    "question": "which mechanism is a part of time-sharing systems?",
     "answers": [
       {
         "text": "no scheduler is needed",
         "correct": false
       },
       {
-        "text": "Medium-Term Scheduler",
+        "text": "medium-term scheduler",
         "correct": false
       },
       {
-        "text": "Long-Term Scheduler",
+        "text": "long-term scheduler",
         "correct": false
       },
       {
-        "text": "Short-Term Scheduler",
+        "text": "short-term scheduler",
         "correct": true
       }
     ]
   },
   {
-    "question": "The algorithm in which the most recently used page is swapped out is called (enter the abbreviation if applicable):",
+    "question": "the algorithm in which the most recently used page is swapped out is called (enter the abbreviation if applicable):",
     "answers": [
       {
-        "text": "LRU",
+        "text": "lru",
         "correct": true
       }
     ]
   },
   {
-    "question": "Discontinuous allocation is the result of:",
+    "question": "discontinuous allocation is the result of:",
     "answers": [
       {
         "text": "segmantation",
@@ -10794,7 +10794,7 @@
     ]
   },
   {
-    "question": "Page thrashing is a phenomenon involving:",
+    "question": "page thrashing is a phenomenon involving:",
     "answers": [
       {
         "text": "loading the same page over and over again",
@@ -10815,7 +10815,7 @@
     ]
   },
   {
-    "question": "Scheduling disk access involves deciding on the following:",
+    "question": "scheduling disk access involves deciding on the following:",
     "answers": [
       {
         "text": "which drive should be used next",
@@ -10836,7 +10836,7 @@
     ]
   },
   {
-    "question": "Which scheduling is used to organize concurrency?",
+    "question": "which scheduling is used to organize concurrency?",
     "answers": [
       {
         "text": "preempting",
@@ -10857,28 +10857,28 @@
     ]
   },
   {
-    "question": "A multiprogram system is one that, in principle:",
+    "question": "a multiprogram system is one that, in principle:",
     "answers": [
       {
-        "text": "Allows for running programs only one after another",
+        "text": "allows for running programs only one after another",
         "correct": false
       },
       {
-        "text": "Allows for storing multiple programs in mass memory",
+        "text": "allows for storing multiple programs in mass memory",
         "correct": false
       },
       {
-        "text": "Allows for running more than one program at the same time",
+        "text": "allows for running more than one program at the same time",
         "correct": false
       },
       {
-        "text": "It allows for storing many programs in the main memory",
+        "text": "it allows for storing many programs in the main memory",
         "correct": true
       }
     ]
   },
   {
-    "question": "When is the scheduler called?",
+    "question": "when is the scheduler called?",
     "answers": [
       {
         "text": "when the scheduler decides itself",
@@ -10899,7 +10899,7 @@
     ]
   },
   {
-    "question": "The scheduler decisions take the form:",
+    "question": "the scheduler decisions take the form:",
     "answers": [
       {
         "text": "change from ready to waiting state",
@@ -10920,7 +10920,7 @@
     ]
   },
   {
-    "question": "The number of condition variables is by definition in the monitor:",
+    "question": "the number of condition variables is by definition in the monitor:",
     "answers": [
       {
         "text": "one",
@@ -10941,43 +10941,43 @@
     ]
   },
   {
-    "question": "In UNIX, access rights are specified:",
+    "question": "in unix, access rights are specified:",
     "answers": [
       {
-        "text": "Individually for each file",
+        "text": "individually for each file",
         "correct": true
       },
       {
-        "text": "At the same time, for all files in a given directory owned by the user",
+        "text": "at the same time, for all files in a given directory owned by the user",
         "correct": false
       },
       {
-        "text": "Separately for the user, the group to which the user belongs and for all others",
+        "text": "separately for the user, the group to which the user belongs and for all others",
         "correct": true
       },
       {
-        "text": "Separately for write, read and execute/search",
+        "text": "separately for write, read and execute/search",
         "correct": true
       }
     ]
   },
   {
-    "question": "Which of the following facilities or abilities are required to provide mutual exclusion support?",
+    "question": "which of the following facilities or abilities are required to provide mutual exclusion support?",
     "answers": [
       {
-        "text": "The relative speeds of the tasks must be taken into account.",
+        "text": "the relative speeds of the tasks must be taken into account.",
         "correct": false
       },
       {
-        "text": "The task stays in its critical section only for a finite amount of time.",
+        "text": "the task stays in its critical section only for a finite amount of time.",
         "correct": true
       },
       {
-        "text": "A task that is performed outside the critical section must not affect the behavior of a task in the critical section.",
+        "text": "a task that is performed outside the critical section must not affect the behavior of a task in the critical section.",
         "correct": true
       },
       {
-        "text": "Task scheduling must be considered.",
+        "text": "task scheduling must be considered.",
         "correct": false
       }
     ]
@@ -11004,7 +11004,7 @@
     ]
   },
   {
-    "question": "Compaction solves the problem:",
+    "question": "compaction solves the problem:",
     "answers": [
       {
         "text": "external fragmentation",
@@ -11025,28 +11025,28 @@
     ]
   },
   {
-    "question": "Swap area is placed in:",
+    "question": "swap area is placed in:",
     "answers": [
       {
-        "text": "Primary memory",
+        "text": "primary memory",
         "correct": false
       },
       {
-        "text": "Virtual memory",
+        "text": "virtual memory",
         "correct": false
       },
       {
-        "text": "Index tables",
+        "text": "index tables",
         "correct": false
       },
       {
-        "text": "Mass memory",
+        "text": "mass memory",
         "correct": true
       }
     ]
   },
   {
-    "question": "A typical collection of program segments includes (some of them can be combined):",
+    "question": "a typical collection of program segments includes (some of them can be combined):",
     "answers": [
       {
         "text": "stack segment",
@@ -11065,13 +11065,13 @@
         "correct": false
       },
       {
-        "text": "Code segment",
+        "text": "code segment",
         "correct": true
       }
     ]
   },
   {
-    "question": "The common allocation queue to fixed blocks of memory of different sizes causes:",
+    "question": "the common allocation queue to fixed blocks of memory of different sizes causes:",
     "answers": [
       {
         "text": "need for compaction",
@@ -11088,7 +11088,7 @@
     ]
   },
   {
-    "question": "Sequence of actions when starting a new task:",
+    "question": "sequence of actions when starting a new task:",
     "answers": [
       {
         "text": "filling in the descriptor in the kernel",
@@ -11109,7 +11109,7 @@
     ]
   },
   {
-    "question": "For address translation, the following is used:",
+    "question": "for address translation, the following is used:",
     "answers": [
       {
         "text": "translation register",
@@ -11130,7 +11130,7 @@
     ]
   },
   {
-    "question": "The root directory of the disk should be located:",
+    "question": "the root directory of the disk should be located:",
     "answers": [
       {
         "text": "at a fixed address in main memory",
@@ -11151,7 +11151,7 @@
     ]
   },
   {
-    "question": "Logical address is:",
+    "question": "logical address is:",
     "answers": [
       {
         "text": "relative address",
@@ -11172,49 +11172,49 @@
     ]
   },
   {
-    "question": "What are the functions of the kernel?",
+    "question": "what are the functions of the kernel?",
     "answers": [
       {
-        "text": "File management",
+        "text": "file management",
         "correct": false
       },
       {
-        "text": "Program management",
+        "text": "program management",
         "correct": false
       },
       {
-        "text": "Interrupt handling",
+        "text": "interrupt handling",
         "correct": true
       },
       {
-        "text": "Memory management",
+        "text": "memory management",
         "correct": false
       }
     ]
   },
   {
-    "question": "The environment in which the process is executed includes:",
+    "question": "the environment in which the process is executed includes:",
     "answers": [
       {
-        "text": "Contents of the interrupt request register",
+        "text": "contents of the interrupt request register",
         "correct": false
       },
       {
-        "text": "General purpose registers content",
+        "text": "general purpose registers content",
         "correct": true
       },
       {
-        "text": "A set of environment variables",
+        "text": "a set of environment variables",
         "correct": true
       },
       {
-        "text": "Process address space",
+        "text": "process address space",
         "correct": true
       }
     ]
   },
   {
-    "question": "MMU uses index tables to:",
+    "question": "mmu uses index tables to:",
     "answers": [
       {
         "text": "generate a physical address",
@@ -11235,66 +11235,66 @@
     ]
   },
   {
-    "question": "What is true about system level threads?",
+    "question": "what is true about system level threads?",
     "answers": [
       {
-        "text": "All threads of the process must execute on the same processor.",
+        "text": "all threads of the process must execute on the same processor.",
         "correct": false
       },
       {
-        "text": "All process threads share the same address space.",
+        "text": "all process threads share the same address space.",
         "correct": true
       },
       {
-        "text": "Thread switching does not require interaction with the operating system.",
+        "text": "thread switching does not require interaction with the operating system.",
         "correct": false
       },
       {
-        "text": "All process threads can share the same set of open files.",
+        "text": "all process threads can share the same set of open files.",
         "correct": true
       }
     ]
   },
   {
-    "question": "The direct resume rule means that:",
+    "question": "the direct resume rule means that:",
     "answers": [
       {
-        "text": "The resuming process applies for the critical region just like other processes on monitor input",
+        "text": "the resuming process applies for the critical region just like other processes on monitor input",
         "correct": true
       },
       {
-        "text": "The resuming process loses the critical region",
+        "text": "the resuming process loses the critical region",
         "correct": true
       },
       {
-        "text": "The resuming process gets a critical region after the resumed process exits the monitor",
+        "text": "the resuming process gets a critical region after the resumed process exits the monitor",
         "correct": false
       }
     ]
   },
   {
-    "question": "What is true for simultaneous execution in the same context?",
+    "question": "what is true for simultaneous execution in the same context?",
     "answers": [
       {
-        "text": "A multiprocessor kernel can be concurrent",
+        "text": "a multiprocessor kernel can be concurrent",
         "correct": true
       },
       {
-        "text": "The shared context forces threads to run on the same processor",
+        "text": "the shared context forces threads to run on the same processor",
         "correct": false
       },
       {
-        "text": "The use of threads ensures concurrency within the process.",
+        "text": "the use of threads ensures concurrency within the process.",
         "correct": true
       },
       {
-        "text": "Threads minimize context switch time.",
+        "text": "threads minimize context switch time.",
         "correct": true
       }
     ]
   },
   {
-    "question": "In operating system:",
+    "question": "in operating system:",
     "answers": [
       {
         "text": "timer interrupt may not be handled",
@@ -11315,7 +11315,7 @@
     ]
   },
   {
-    "question": "The combination of paging and segmentation consists in:",
+    "question": "the combination of paging and segmentation consists in:",
     "answers": [
       {
         "text": "the use of a segment table or a pool of segment registers treated as an additional, superior level of paging",
@@ -11326,7 +11326,7 @@
         "correct": false
       },
       {
-        "text": "Generating a 'frame error' interrupt when the frame containing the page does not belong to the current segment",
+        "text": "generating a 'frame error' interrupt when the frame containing the page does not belong to the current segment",
         "correct": false
       },
       {
@@ -11336,61 +11336,61 @@
     ]
   },
   {
-    "question": "In UNIX, the disk contains the following areas:",
+    "question": "in unix, the disk contains the following areas:",
     "answers": [
       {
-        "text": "SuperBlock",
+        "text": "superblock",
         "correct": true
       },
       {
-        "text": "I-node table",
+        "text": "i-node table",
         "correct": true
       },
       {
-        "text": "Directories",
+        "text": "directories",
         "correct": false
       },
       {
-        "text": "Files data",
+        "text": "files data",
         "correct": true
       }
     ]
   },
   {
-    "question": "Is memory protection useless in a non-concurrent system?",
+    "question": "is memory protection useless in a non-concurrent system?",
     "answers": [
       {
-        "text": "True",
+        "text": "true",
         "correct": false
       },
       {
-        "text": "False",
+        "text": "false",
         "correct": true
       }
     ]
   },
   {
-    "question": "Is memory protection useless on a single-user system?",
+    "question": "is memory protection useless on a single-user system?",
     "answers": [
       {
-        "text": "True",
+        "text": "true",
         "correct": false
       },
       {
-        "text": "False",
+        "text": "false",
         "correct": true
       }
     ]
   },
   {
-    "question": "Which swapping algorithms can be implemented based on hardware support in the form of a collective reading of reference bits and collective clearing of these bits?",
+    "question": "which swapping algorithms can be implemented based on hardware support in the form of a collective reading of reference bits and collective clearing of these bits?",
     "answers": [
       {
         "text": "working set clock",
         "correct": false
       },
       {
-        "text": "NRU",
+        "text": "nru",
         "correct": false
       },
       {
@@ -11402,11 +11402,11 @@
         "correct": false
       },
       {
-        "text": "LFU",
+        "text": "lfu",
         "correct": true
       },
       {
-        "text": "LRU",
+        "text": "lru",
         "correct": true
       },
       {
@@ -11414,7 +11414,7 @@
         "correct": false
       },
       {
-        "text": "FIFO",
+        "text": "fifo",
         "correct": false
       },
       {
@@ -11424,20 +11424,20 @@
     ]
   },
   {
-    "question": "Is memory protection useless in a single program system?",
+    "question": "is memory protection useless in a single program system?",
     "answers": [
       {
-        "text": "True",
+        "text": "true",
         "correct": false
       },
       {
-        "text": "False",
+        "text": "false",
         "correct": true
       }
     ]
   },
   {
-    "question": "What type of code can execute on multiple datasets in parallel:",
+    "question": "what type of code can execute on multiple datasets in parallel:",
     "answers": [
       {
         "text": "binary",
@@ -11454,18 +11454,18 @@
     ]
   },
   {
-    "question": "In which swapping algorithms is it necessary to clear the R bits individually?",
+    "question": "in which swapping algorithms is it necessary to clear the r bits individually?",
     "answers": [
       {
         "text": "second chance",
         "correct": true
       },
       {
-        "text": "FIFO",
+        "text": "fifo",
         "correct": false
       },
       {
-        "text": "LRU",
+        "text": "lru",
         "correct": false
       },
       {
@@ -11473,7 +11473,7 @@
         "correct": false
       },
       {
-        "text": "LFU",
+        "text": "lfu",
         "correct": false
       },
       {
@@ -11489,13 +11489,13 @@
         "correct": false
       },
       {
-        "text": "NRU",
+        "text": "nru",
         "correct": false
       }
     ]
   },
   {
-    "question": "Devices report their readiness by:",
+    "question": "devices report their readiness by:",
     "answers": [
       {
         "text": "system call",
@@ -11516,7 +11516,7 @@
     ]
   },
   {
-    "question": "By definition, a deadlock is a situation where:",
+    "question": "by definition, a deadlock is a situation where:",
     "answers": [
       {
         "text": "at least two processes are waiting for conditions that cannot be met",
@@ -11537,7 +11537,7 @@
     ]
   },
   {
-    "question": "Physical address:",
+    "question": "physical address:",
     "answers": [
       {
         "text": "points to a location in the address space of primary memory",
@@ -11558,45 +11558,45 @@
     ]
   },
   {
-    "question": "A process always transitions from the 'user' state to the 'system' state as a result of:",
+    "question": "a process always transitions from the 'user' state to the 'system' state as a result of:",
     "answers": [
       {
-        "text": "A software interrupt that calls a system function",
+        "text": "a software interrupt that calls a system function",
         "correct": true
       },
       {
-        "text": "Process suspension",
+        "text": "process suspension",
         "correct": false
       },
       {
-        "text": "Debugger trap",
+        "text": "debugger trap",
         "correct": true
       },
       {
-        "text": "Hardware interrupt",
+        "text": "hardware interrupt",
         "correct": false
       }
     ]
   },
   {
-    "question": "The microkernel of the operating system performs the following role:",
+    "question": "the microkernel of the operating system performs the following role:",
     "answers": [
       {
-        "text": "It receives interrupts and routes them to the appropriate drivers and other layers of the system",
+        "text": "it receives interrupts and routes them to the appropriate drivers and other layers of the system",
         "correct": true
       },
       {
-        "text": "Synchronizes processes",
+        "text": "synchronizes processes",
         "correct": true
       },
       {
-        "text": "Runs programs",
+        "text": "runs programs",
         "correct": false
       }
     ]
   },
   {
-    "question": "Essential activity in the interrupt handling procedure (i.e., the activity for which the interrupt is issued) consists in:",
+    "question": "essential activity in the interrupt handling procedure (i.e., the activity for which the interrupt is issued) consists in:",
     "answers": [
       {
         "text": "saving the context of the interrupted process",
@@ -11617,7 +11617,7 @@
     ]
   },
   {
-    "question": "The kernel (microkernel) is responsible for:",
+    "question": "the kernel (microkernel) is responsible for:",
     "answers": [
       {
         "text": "memory allocation and freeing",
@@ -11638,35 +11638,35 @@
     ]
   },
   {
-    "question": "If the loader inserts a program with absolute addresses into a fixed address space, it is called:",
+    "question": "if the loader inserts a program with absolute addresses into a fixed address space, it is called:",
     "answers": [
       {
-        "text": "Dynamic relocation",
+        "text": "dynamic relocation",
         "correct": true
       },
       {
-        "text": "Static relocation",
+        "text": "static relocation",
         "correct": false
       },
       {
-        "text": "Static loading",
+        "text": "static loading",
         "correct": false
       },
       {
-        "text": "Dynamic loading",
+        "text": "dynamic loading",
         "correct": false
       }
     ]
   },
   {
-    "question": "Interrupt handling - sequence of actions:",
+    "question": "interrupt handling - sequence of actions:",
     "answers": [
       {
-        "text": "saving a copy of the interrupt vector (PC and SR)",
+        "text": "saving a copy of the interrupt vector (pc and sr)",
         "correct": true
       },
       {
-        "text": "switching to system mode (modification of PC and status register)",
+        "text": "switching to system mode (modification of pc and status register)",
         "correct": true
       },
       {
@@ -11680,95 +11680,95 @@
     ]
   },
   {
-    "question": "The hardware resources of a computer system are:",
+    "question": "the hardware resources of a computer system are:",
     "answers": [
       {
-        "text": "Windows on the screen",
+        "text": "windows on the screen",
         "correct": false
       },
       {
-        "text": "Primary memory",
+        "text": "primary memory",
         "correct": true
       },
       {
-        "text": "Processor time",
+        "text": "processor time",
         "correct": true
       },
       {
-        "text": "Peripheral devices",
+        "text": "peripheral devices",
         "correct": true
       }
     ]
   },
   {
-    "question": "On UNIX, the number of files is directly limited by:",
+    "question": "on unix, the number of files is directly limited by:",
     "answers": [
       {
-        "text": "The number of bits of the field describing the size of the file",
+        "text": "the number of bits of the field describing the size of the file",
         "correct": false
       },
       {
-        "text": "The number of bits of the disk address",
+        "text": "the number of bits of the disk address",
         "correct": false
       },
       {
-        "text": "I-node table size",
+        "text": "i-node table size",
         "correct": true
       },
       {
-        "text": "Allocation unit size",
+        "text": "allocation unit size",
         "correct": false
       },
       {
-        "text": "The size of the space allocated for files",
+        "text": "the size of the space allocated for files",
         "correct": true
       }
     ]
   },
   {
-    "question": "Static relocation is performed by:",
+    "question": "static relocation is performed by:",
     "answers": [
       {
-        "text": "Linker",
+        "text": "linker",
         "correct": true
       },
       {
-        "text": "Paging system",
+        "text": "paging system",
         "correct": false
       },
       {
-        "text": "Special registers (DATUM)",
+        "text": "special registers (datum)",
         "correct": false
       },
       {
-        "text": "Segment descriptors",
+        "text": "segment descriptors",
         "correct": false
       }
     ]
   },
   {
-    "question": "Which of the following few common services can be partially provided by software other than the operating system?",
+    "question": "which of the following few common services can be partially provided by software other than the operating system?",
     "answers": [
       {
-        "text": "Running programs",
+        "text": "running programs",
         "correct": false
       },
       {
-        "text": "I/O operations",
+        "text": "i/o operations",
         "correct": false
       },
       {
-        "text": "Manipulating the file system",
+        "text": "manipulating the file system",
         "correct": true
       },
       {
-        "text": "Security and protection",
+        "text": "security and protection",
         "correct": true
       }
     ]
   },
   {
-    "question": "What is the average time in the system for tasks in the batch, using SJF algorithm?\nThe system is equipped with 4 processors\ntask\n1\n2\n3\n4\nprocessing time\n3.6\n6.8\n2.5\n1.7",
+    "question": "what is the average time in the system for tasks in the batch, using sjf algorithm?\nthe system is equipped with 4 processors\ntask\n1\n2\n3\n4\nprocessing time\n3.6\n6.8\n2.5\n1.7",
     "answers": [
       {
         "text": "3.7",
@@ -11777,7 +11777,7 @@
     ]
   },
   {
-    "question": "In RAID 4, data is placed in Strips that are 'scattered' over the data disks, so that each subsequent strip is on the next data disk, modulo the number of disks. For this, there is a parity disk that holds the parity bits of zeroth bits, first bits, second bits, etc., equal-numbered strips divided by the number of data disks, for example, strips 0-3, 4-7, 8-11, etc.: the start of strips 0,1,2,3 looks like this:\n1\n1\n1\n0\n0\nParity disk\n1\n1\n1\n1\n1\nDisk 3\n1\n0\n0\n1\n0\nDisk 2\n1\n0\n1\n0\n1\nDisk 1\n0\n1\n1\n0\n0\nDisk 0\n\nIn the parity strip, the values are placed so that the parity bit keeps the corresponding strip bits 0-3 even.\nDisk 3 has been corrupted and always reads 1. After replacing the disk with a new one, what values should I put in the strip on disk 3?",
+    "question": "in raid 4, data is placed in strips that are 'scattered' over the data disks, so that each subsequent strip is on the next data disk, modulo the number of disks. for this, there is a parity disk that holds the parity bits of zeroth bits, first bits, second bits, etc., equal-numbered strips divided by the number of data disks, for example, strips 0-3, 4-7, 8-11, etc.: the start of strips 0,1,2,3 looks like this:\n1\n1\n1\n0\n0\nparity disk\n1\n1\n1\n1\n1\ndisk 3\n1\n0\n0\n1\n0\ndisk 2\n1\n0\n1\n0\n1\ndisk 1\n0\n1\n1\n0\n0\ndisk 0\n\nin the parity strip, the values are placed so that the parity bit keeps the corresponding strip bits 0-3 even.\ndisk 3 has been corrupted and always reads 1. after replacing the disk with a new one, what values should i put in the strip on disk 3?",
     "answers": [
       {
         "text": "10111",
@@ -11786,7 +11786,7 @@
     ]
   },
   {
-    "question": "Assuming memory cells are 1-byte, the page number in the address field is 12 bits, the offset is 12 bits, the frame number is 10 bits, and all entries in the TIS page index table are on a 16-bit word boundary, enter:\n- the maximum size of the program's virtual memory in MB",
+    "question": "assuming memory cells are 1-byte, the page number in the address field is 12 bits, the offset is 12 bits, the frame number is 10 bits, and all entries in the tis page index table are on a 16-bit word boundary, enter:\n- the maximum size of the program's virtual memory in mb",
     "answers": [
       {
         "text": "4",
@@ -11795,7 +11795,7 @@
     ]
   },
   {
-    "question": "Inter-process communication can be organized using:",
+    "question": "inter-process communication can be organized using:",
     "answers": [
       {
         "text": "interrupts",
@@ -11816,7 +11816,7 @@
     ]
   },
   {
-    "question": "A memory management technique in which the system divides memory into equal-sized portions to easily manage relocation is called:",
+    "question": "a memory management technique in which the system divides memory into equal-sized portions to easily manage relocation is called:",
     "answers": [
       {
         "text": "swapping",
@@ -11837,24 +11837,24 @@
     ]
   },
   {
-    "question": "System/user threads:",
+    "question": "system/user threads:",
     "answers": [
       {
-        "text": "User-level threads share the same stack.",
+        "text": "user-level threads share the same stack.",
         "correct": false
       },
       {
-        "text": "User-level thread descriptors are stored in the operating system kernel.",
+        "text": "user-level thread descriptors are stored in the operating system kernel.",
         "correct": false
       },
       {
-        "text": "User-level threads share the same execution context.",
+        "text": "user-level threads share the same execution context.",
         "correct": true
       }
     ]
   },
   {
-    "question": "The effective address is at the same time:",
+    "question": "the effective address is at the same time:",
     "answers": [
       {
         "text": "indirect address",
@@ -11875,7 +11875,7 @@
     ]
   },
   {
-    "question": "What mechanism is part of time-sharing systems?",
+    "question": "what mechanism is part of time-sharing systems?",
     "answers": [
       {
         "text": "high-level scheduler",
@@ -11896,48 +11896,48 @@
     ]
   },
   {
-    "question": "In the philosophers problem, if there are 4 of them:",
+    "question": "in the philosophers problem, if there are 4 of them:",
     "answers": [
       {
-        "text": "Starvation is not possible",
+        "text": "starvation is not possible",
         "correct": true
       },
       {
-        "text": "Starvation is possible",
+        "text": "starvation is possible",
         "correct": false
       },
       {
-        "text": "Deadlock is possible",
+        "text": "deadlock is possible",
         "correct": true
       },
       {
-        "text": "Deadlock is not possible",
+        "text": "deadlock is not possible",
         "correct": false
       }
     ]
   },
   {
-    "question": "The direct resume rule means that:",
+    "question": "the direct resume rule means that:",
     "answers": [
       {
-        "text": "The resuming process loses the critical region",
+        "text": "the resuming process loses the critical region",
         "correct": true
       },
       {
-        "text": "The resuming process gets a critical region after the resumed process exits the critical region",
+        "text": "the resuming process gets a critical region after the resumed process exits the critical region",
         "correct": false
       },
       {
-        "text": "The resuming process applies for the critical region just like other processes waiting to enter the critical region",
+        "text": "the resuming process applies for the critical region just like other processes waiting to enter the critical region",
         "correct": true
       }
     ]
   },
   {
-    "question": "A typical collection of program segments includes (some of them can be combined):",
+    "question": "a typical collection of program segments includes (some of them can be combined):",
     "answers": [
       {
-        "text": "Code segment",
+        "text": "code segment",
         "correct": true
       },
       {
@@ -11959,7 +11959,7 @@
     ]
   },
   {
-    "question": "When starting a program, how is control passed to it from the operating system?",
+    "question": "when starting a program, how is control passed to it from the operating system?",
     "answers": [
       {
         "text": "extracode",
@@ -11970,7 +11970,7 @@
         "correct": false
       },
       {
-        "text": "return from interrupt handler IRET",
+        "text": "return from interrupt handler iret",
         "correct": true
       },
       {
@@ -11980,7 +11980,7 @@
     ]
   },
   {
-    "question": "For address translation, the following is used:",
+    "question": "for address translation, the following is used:",
     "answers": [
       {
         "text": "reference and protection bits",
@@ -12001,18 +12001,18 @@
     ]
   },
   {
-    "question": "In the 'current' state, there is a process that:",
+    "question": "in the 'current' state, there is a process that:",
     "answers": [
       {
         "text": "occupies a processor",
         "correct": true
       },
       {
-        "text": "waits for an I/O operation to complete",
+        "text": "waits for an i/o operation to complete",
         "correct": false
       },
       {
-        "text": "fills the CPU idle time",
+        "text": "fills the cpu idle time",
         "correct": false
       },
       {
@@ -12022,28 +12022,28 @@
     ]
   },
   {
-    "question": "In UNIX, the disk contains the following areas:",
+    "question": "in unix, the disk contains the following areas:",
     "answers": [
       {
-        "text": "Directories",
+        "text": "directories",
         "correct": false
       },
       {
-        "text": "Files data",
+        "text": "files data",
         "correct": true
       },
       {
-        "text": "I-node table",
+        "text": "i-node table",
         "correct": true
       },
       {
-        "text": "SuperBlock",
+        "text": "superblock",
         "correct": true
       }
     ]
   },
   {
-    "question": "The conversion of the effective address to the physical one takes place:",
+    "question": "the conversion of the effective address to the physical one takes place:",
     "answers": [
       {
         "text": "in the memory management unit",
@@ -12064,7 +12064,7 @@
     ]
   },
   {
-    "question": "Dirty frame is:",
+    "question": "dirty frame is:",
     "answers": [
       {
         "text": "candidate to be swapped first",
@@ -12085,7 +12085,7 @@
     ]
   },
   {
-    "question": "The common allocation queue to fixed blocks of memory of equal size causes:",
+    "question": "the common allocation queue to fixed blocks of memory of equal size causes:",
     "answers": [
       {
         "text": "external fragmentation",
@@ -12102,129 +12102,129 @@
     ]
   },
   {
-    "question": "The microkernel of the operating system performs the following role:",
+    "question": "the microkernel of the operating system performs the following role:",
     "answers": [
       {
-        "text": "It receives interrupts and routes them to the appropriate drivers and other layers of the system",
+        "text": "it receives interrupts and routes them to the appropriate drivers and other layers of the system",
         "correct": true
       },
       {
-        "text": "Runs programs",
+        "text": "runs programs",
         "correct": false
       },
       {
-        "text": "Synchronizes processes",
+        "text": "synchronizes processes",
         "correct": true
       }
     ]
   },
   {
-    "question": "LRU algorithm consists in:",
+    "question": "lru algorithm consists in:",
     "answers": [
       {
-        "text": "Downloading to the memory of the page that will be needed as soon as possible",
+        "text": "downloading to the memory of the page that will be needed as soon as possible",
         "correct": false
       },
       {
-        "text": "Removing the least used page from memory",
+        "text": "removing the least used page from memory",
         "correct": false
       },
       {
-        "text": "Downloading to memory the page that is most often needed",
+        "text": "downloading to memory the page that is most often needed",
         "correct": false
       },
       {
-        "text": "Ejecting the most recently used page from memory",
+        "text": "ejecting the most recently used page from memory",
         "correct": true
       }
     ]
   },
   {
-    "question": "Address translation aims to:",
+    "question": "address translation aims to:",
     "answers": [
       {
-        "text": "Detecting the phenomenon of locality of references",
+        "text": "detecting the phenomenon of locality of references",
         "correct": false
       },
       {
-        "text": "Converting a physical address to a virtual one",
+        "text": "converting a physical address to a virtual one",
         "correct": false
       },
       {
-        "text": "Generating a 'frame error' interrupt when the page is out of memory",
+        "text": "generating a 'frame error' interrupt when the page is out of memory",
         "correct": false
       },
       {
-        "text": "Converting a virtual address to a physical one",
+        "text": "converting a virtual address to a physical one",
         "correct": true
       }
     ]
   },
   {
-    "question": "A concurrent system is one that, in principle:",
+    "question": "a concurrent system is one that, in principle:",
     "answers": [
       {
-        "text": "It runs on a multiprocessor computer",
+        "text": "it runs on a multiprocessor computer",
         "correct": false
       },
       {
-        "text": "Requires the use of timer interrupts",
+        "text": "requires the use of timer interrupts",
         "correct": false
       },
       {
-        "text": "It allows multiple programs/processes/threads to run physically simultaneously",
+        "text": "it allows multiple programs/processes/threads to run physically simultaneously",
         "correct": false
       },
       {
-        "text": "Allows multiple programs/processes/threads to run simultaneously or seemingly simultaneously",
+        "text": "allows multiple programs/processes/threads to run simultaneously or seemingly simultaneously",
         "correct": true
       }
     ]
   },
   {
-    "question": "A multiprogram system is one that, in principle:",
+    "question": "a multiprogram system is one that, in principle:",
     "answers": [
       {
-        "text": "It allows for running programs only one after another",
+        "text": "it allows for running programs only one after another",
         "correct": false
       },
       {
-        "text": "Allows more than one program to run simultaneously",
+        "text": "allows more than one program to run simultaneously",
         "correct": false
       },
       {
-        "text": "It allows for storing many programs in primary memory",
+        "text": "it allows for storing many programs in primary memory",
         "correct": true
       },
       {
-        "text": "It allows you to store many programs in mass memory",
+        "text": "it allows you to store many programs in mass memory",
         "correct": false
       }
     ]
   },
   {
-    "question": "What are the functions of the kernel?",
+    "question": "what are the functions of the kernel?",
     "answers": [
       {
-        "text": "Program management",
+        "text": "program management",
         "correct": false
       },
       {
-        "text": "File management",
+        "text": "file management",
         "correct": false
       },
       {
-        "text": "Memory management",
+        "text": "memory management",
         "correct": false
       },
       {
-        "text": "Interrupt handling",
+        "text": "interrupt handling",
         "correct": true
       }
     ]
   },
   {
-    "question": "By definition, a deadlock is a situation where:",
+    "question": "by definition, a deadlock is a situation where:",
     "answers": [
       {
         "text": "any greater than zero number of processes are waiting for conditions that cannot be met",
@@ -12245,7 +12245,7 @@
     ]
   },
   {
-    "question": "The mechanism for moving programs between primary memory and mass storage is called:",
+    "question": "the mechanism for moving programs between primary memory and mass storage is called:",
     "answers": [
       {
         "text": "sweeping",
@@ -12266,31 +12266,31 @@
     ]
   },
   {
-    "question": "Which of the following applies to user-level threads?",
+    "question": "which of the following applies to user-level threads?",
     "answers": [
       {
-        "text": "User-level threads can themselves be multi-threaded.",
+        "text": "user-level threads can themselves be multi-threaded.",
         "correct": false
       },
       {
-        "text": "User-level threads cost no execution time in system mode.",
+        "text": "user-level threads cost no execution time in system mode.",
         "correct": true
       },
       {
-        "text": "The organization of user-level threads is specific to the operating system.",
+        "text": "the organization of user-level threads is specific to the operating system.",
         "correct": false
       },
       {
-        "text": "User-level threads require their descriptors in the kernel.",
+        "text": "user-level threads require their descriptors in the kernel.",
         "correct": false
       }
     ]
   },
   {
-    "question": "Which swapping algorithms can be implemented based on hardware support in the form of a collective reading of reference bits and collective clearing of these bits?",
+    "question": "which swapping algorithms can be implemented based on hardware support in the form of a collective reading of reference bits and collective clearing of these bits?",
     "answers": [
       {
-        "text": "LRU",
+        "text": "lru",
         "correct": true
       },
       {
@@ -12298,15 +12298,15 @@
         "correct": false
       },
       {
-        "text": "LFU",
+        "text": "lfu",
         "correct": true
       },
       {
-        "text": "NRU",
+        "text": "nru",
         "correct": false
       },
       {
-        "text": "FIFO",
+        "text": "fifo",
         "correct": false
       },
       {
@@ -12328,7 +12328,7 @@
     ]
   },
   {
-    "question": "The scheduler decisions take the form:",
+    "question": "the scheduler decisions take the form:",
     "answers": [
       {
         "text": "change from ready to active state",
@@ -12349,23 +12349,23 @@
     ]
   },
   {
-    "question": "The algorithm in which the most recently used page is swapped out is called (enter the abbreviation if applicable):",
+    "question": "the algorithm in which the most recently used page is swapped out is called (enter the abbreviation if applicable):",
     "answers": [
       {
-        "text": "MRU (Most Recently Used)",
+        "text": "mru (most recently used)",
         "correct": false
       }
     ]
   },
   {
-    "question": "Interrupt handling - sequence of actions:",
+    "question": "interrupt handling - sequence of actions:",
     "answers": [
       {
-        "text": "saving a copy of the interrupt vector (PC and SR)",
+        "text": "saving a copy of the interrupt vector (pc and sr)",
         "correct": true
       },
       {
-        "text": "switching to system mode (modification of PC and status register)",
+        "text": "switching to system mode (modification of pc and status register)",
         "correct": true
       },
       {
@@ -12379,7 +12379,7 @@
     ]
   },
   {
-    "question": "Scheduling algorithms can be:",
+    "question": "scheduling algorithms can be:",
     "answers": [
       {
         "text": "term changing",
@@ -12400,28 +12400,28 @@
     ]
   },
   {
-    "question": "The program supervisor layer in the operating system has the following role:",
+    "question": "the program supervisor layer in the operating system has the following role:",
     "answers": [
       {
-        "text": "Runs programs",
+        "text": "runs programs",
         "correct": true
       },
       {
-        "text": "Intercepts all program system calls and routes them to the appropriate layers",
+        "text": "intercepts all program system calls and routes them to the appropriate layers",
         "correct": true
       },
       {
-        "text": "Deals with the management of primary memory (memory allocation to programs)",
+        "text": "deals with the management of primary memory (memory allocation to programs)",
         "correct": true
       },
       {
-        "text": "Deals with buffering data written and read from mass memory",
+        "text": "deals with buffering data written and read from mass memory",
         "correct": false
       }
     ]
   },
   {
-    "question": "Allocation unit for storing files:",
+    "question": "allocation unit for storing files:",
     "answers": [
       {
         "text": "may vary between partitions",
@@ -12442,7 +12442,7 @@
     ]
   },
   {
-    "question": "What exception (software or hardware interrupt) causes system mode if user mode is current?",
+    "question": "what exception (software or hardware interrupt) causes system mode if user mode is current?",
     "answers": [
       {
         "text": "no exception",
@@ -12463,7 +12463,7 @@
     ]
   },
   {
-    "question": "Multiprogramming is a technique in which, as a rule:",
+    "question": "multiprogramming is a technique in which, as a rule:",
     "answers": [
       {
         "text": "is a memory allocation method by which a program is divided into equal parts",
@@ -12484,35 +12484,35 @@
     ]
   },
   {
-    "question": "Using the Test-And-Set instruction in synchronization:",
+    "question": "using the test-and-set instruction in synchronization:",
     "answers": [
       {
-        "text": "It requires processes to actively wait",
+        "text": "it requires processes to actively wait",
         "correct": true
       },
       {
-        "text": "Requires organizing inactive waiting in queues",
+        "text": "requires organizing inactive waiting in queues",
         "correct": false
       },
       {
-        "text": "Requires the use of semaphores",
+        "text": "requires the use of semaphores",
         "correct": false
       },
       {
-        "text": "Stops the processor if 0 is read",
+        "text": "stops the processor if 0 is read",
         "correct": false
       }
     ]
   },
   {
-    "question": "In which swapping algorithms is it necessary to clear the M bits individually?",
+    "question": "in which swapping algorithms is it necessary to clear the m bits individually?",
     "answers": [
       {
-        "text": "FIFO",
+        "text": "fifo",
         "correct": false
       },
       {
-        "text": "LFU",
+        "text": "lfu",
         "correct": false
       },
       {
@@ -12524,11 +12524,11 @@
         "correct": false
       },
       {
-        "text": "LRU",
+        "text": "lru",
         "correct": false
       },
       {
-        "text": "NRU",
+        "text": "nru",
         "correct": false
       },
       {
@@ -12550,7 +12550,7 @@
     ]
   },
   {
-    "question": "Compaction solves the problem:",
+    "question": "compaction solves the problem:",
     "answers": [
       {
         "text": "page fault",
@@ -12571,28 +12571,28 @@
     ]
   },
   {
-    "question": "Static relocation is performed by:",
+    "question": "static relocation is performed by:",
     "answers": [
       {
-        "text": "Segment descriptors",
+        "text": "segment descriptors",
         "correct": false
       },
       {
-        "text": "Special registers (LIMIT)",
+        "text": "special registers (limit)",
         "correct": false
       },
       {
-        "text": "Paging system",
+        "text": "paging system",
         "correct": false
       },
       {
-        "text": "Loader",
+        "text": "loader",
         "correct": true
       }
     ]
   },
   {
-    "question": "Logical address:",
+    "question": "logical address:",
     "answers": [
       {
         "text": "is a relative address - relative to the program counter",
@@ -12613,28 +12613,28 @@
     ]
   },
   {
-    "question": "What does the file system layer do?",
+    "question": "what does the file system layer do?",
     "answers": [
       {
-        "text": "Manages remote file systems",
+        "text": "manages remote file systems",
         "correct": false
       },
       {
-        "text": "Manages remote files",
+        "text": "manages remote files",
         "correct": false
       },
       {
-        "text": "Manages relationships between files",
+        "text": "manages relationships between files",
         "correct": false
       },
       {
-        "text": "Manages files",
+        "text": "manages files",
         "correct": true
       }
     ]
   },
   {
-    "question": "To end the interrupt service, use the following instruction:",
+    "question": "to end the interrupt service, use the following instruction:",
     "answers": [
       {
         "text": "none - the processor will end the service automatically",
@@ -12655,20 +12655,20 @@
     ]
   },
   {
-    "question": "Is memory protection useless in a non-concurrent system?",
+    "question": "is memory protection useless in a non-concurrent system?",
     "answers": [
       {
-        "text": "True",
+        "text": "true",
         "correct": false
       },
       {
-        "text": "False",
+        "text": "false",
         "correct": true
       }
     ]
   },
   {
-    "question": "What mechanism is used to save and restore the task state?",
+    "question": "what mechanism is used to save and restore the task state?",
     "answers": [
       {
         "text": "task descriptor",
@@ -12689,7 +12689,7 @@
     ]
   },
   {
-    "question": "Scheduler function is:",
+    "question": "scheduler function is:",
     "answers": [
       {
         "text": "selecting a task to run",
@@ -12704,34 +12704,34 @@
         "correct": false
       },
       {
-        "text": "counting the CPU time used by tasks",
+        "text": "counting the cpu time used by tasks",
         "correct": false
       }
     ]
   },
   {
-    "question": "Dynamic relocation is performed by:",
+    "question": "dynamic relocation is performed by:",
     "answers": [
       {
-        "text": "Linker",
+        "text": "linker",
         "correct": false
       },
       {
-        "text": "Loader",
+        "text": "loader",
         "correct": false
       },
       {
-        "text": "Segment descriptors",
+        "text": "segment descriptors",
         "correct": true
       },
       {
-        "text": "Compiler",
+        "text": "compiler",
         "correct": false
       }
     ]
   },
   {
-    "question": "What paging element is NOT used in real-time systems?",
+    "question": "what paging element is not used in real-time systems?",
     "answers": [
       {
         "text": "protection bits",
@@ -12752,7 +12752,7 @@
     ]
   },
   {
-    "question": "When an exception is raised in user mode, the operating system switches to the kernel system stack, and what happens when an exception is raised in system mode?",
+    "question": "when an exception is raised in user mode, the operating system switches to the kernel system stack, and what happens when an exception is raised in system mode?",
     "answers": [
       {
         "text": "switches back to the application program stack",
@@ -12773,24 +12773,24 @@
     ]
   },
   {
-    "question": "Opening a file in UNIX writes the following entries in the operating system's data structures:",
+    "question": "opening a file in unix writes the following entries in the operating system's data structures:",
     "answers": [
       {
-        "text": "Inserting a new entry into the System Table of Open Files or incrementing a counter in an existing entry",
+        "text": "inserting a new entry into the system table of open files or incrementing a counter in an existing entry",
         "correct": false
       },
       {
-        "text": "Inserting a new item into the Table of Open Files of the Process",
+        "text": "inserting a new item into the table of open files of the process",
         "correct": true
       },
       {
-        "text": "Inserting a new entry into the Table of Active I-nodes or increasing the counter in an existing entry",
+        "text": "inserting a new entry into the table of active i-nodes or increasing the counter in an existing entry",
         "correct": true
       }
     ]
   },
   {
-    "question": "Virtual memory consists of:",
+    "question": "virtual memory consists of:",
     "answers": [
       {
         "text": "cache memory and mass storage",
@@ -12811,7 +12811,7 @@
     ]
   },
   {
-    "question": "The scheduling goal, which is to occupy processors as efficiently as possible, is:",
+    "question": "the scheduling goal, which is to occupy processors as efficiently as possible, is:",
     "answers": [
       {
         "text": "throughput",
@@ -12828,7 +12828,7 @@
     ]
   },
   {
-    "question": "Separate allocation queues for fixed memory blocks of different sizes cause:",
+    "question": "separate allocation queues for fixed memory blocks of different sizes cause:",
     "answers": [
       {
         "text": "external fragmentation",
@@ -12845,7 +12845,7 @@
     ]
   },
   {
-    "question": "How does the operating system call the task completion subroutine?",
+    "question": "how does the operating system call the task completion subroutine?",
     "answers": [
       {
         "text": "sets the trace in the terminating subroutine to the current position",
@@ -12856,7 +12856,7 @@
         "correct": false
       },
       {
-        "text": "recreates the context programmatically and executes the IRET instruction",
+        "text": "recreates the context programmatically and executes the iret instruction",
         "correct": true
       },
       {
@@ -12866,7 +12866,7 @@
     ]
   },
   {
-    "question": "Which swapping algorithms use page reference history?",
+    "question": "which swapping algorithms use page reference history?",
     "answers": [
       {
         "text": "working set",
@@ -12877,11 +12877,11 @@
         "correct": false
       },
       {
-        "text": "NRU",
+        "text": "nru",
         "correct": false
       },
       {
-        "text": "FIFO",
+        "text": "fifo",
         "correct": false
       },
       {
@@ -12889,17 +12889,17 @@
         "correct": false
       },
       {
-        "text": "LFU",
+        "text": "lfu",
         "correct": true
       },
       {
-        "text": "LRU",
+        "text": "lru",
         "correct": true
       }
     ]
   },
   {
-    "question": "Effective address is:",
+    "question": "effective address is:",
     "answers": [
       {
         "text": "indirect address",
@@ -12920,7 +12920,7 @@
     ]
   },
   {
-    "question": "The thread is also called:",
+    "question": "the thread is also called:",
     "answers": [
       {
         "text": "lightweight process",
@@ -12941,28 +12941,28 @@
     ]
   },
   {
-    "question": "In UNIX, access rights are attributes:",
+    "question": "in unix, access rights are attributes:",
     "answers": [
       {
-        "text": "An entry in the I-node table",
+        "text": "an entry in the i-node table",
         "correct": true
       },
       {
-        "text": "A special table specifying access rights",
+        "text": "a special table specifying access rights",
         "correct": false
       },
       {
-        "text": "User descriptor",
+        "text": "user descriptor",
         "correct": false
       },
       {
-        "text": "A directory entry for a file",
+        "text": "a directory entry for a file",
         "correct": false
       }
     ]
   },
   {
-    "question": "Paging - the key in associative memory is:",
+    "question": "paging - the key in associative memory is:",
     "answers": [
       {
         "text": "the frame number concatenated with the page number",
@@ -12983,7 +12983,7 @@
     ]
   },
   {
-    "question": "The number of tasks performed on the system in a given time is:",
+    "question": "the number of tasks performed on the system in a given time is:",
     "answers": [
       {
         "text": "utilization",
@@ -13004,7 +13004,7 @@
     ]
   },
   {
-    "question": "Interrupt mask:",
+    "question": "interrupt mask:",
     "answers": [
       {
         "text": "can be set and reset by special processor instructions",
@@ -13025,7 +13025,7 @@
     ]
   },
   {
-    "question": "Semaphores are used to solve the problem:",
+    "question": "semaphores are used to solve the problem:",
     "answers": [
       {
         "text": "mutual exclusion",
@@ -13036,7 +13036,7 @@
         "correct": false
       },
       {
-        "text": "Belady problem",
+        "text": "belady problem",
         "correct": false
       },
       {
@@ -13046,7 +13046,7 @@
     ]
   },
   {
-    "question": "In the case of hardware interrupt summation ('wire or'):",
+    "question": "in the case of hardware interrupt summation ('wire or'):",
     "answers": [
       {
         "text": "the bus driver can poll devices about issuing an interrupt",
@@ -13067,45 +13067,45 @@
     ]
   },
   {
-    "question": "Calling the program with the 'exec' operation results in (accurately to the result of the exec operation):",
+    "question": "calling the program with the 'exec' operation results in (accurately to the result of the exec operation):",
     "answers": [
       {
-        "text": "Loading a code segment from disk, duplicating the data segment of the calling process",
+        "text": "loading a code segment from disk, duplicating the data segment of the calling process",
         "correct": false
       },
       {
-        "text": "Loading a code segment from disk, duplicating data segments and the calling process stack",
+        "text": "loading a code segment from disk, duplicating data segments and the calling process stack",
         "correct": false
       },
       {
-        "text": "Loading code and data segments from disk, initializing a new stack segment",
+        "text": "loading code and data segments from disk, initializing a new stack segment",
         "correct": true
       }
     ]
   },
   {
-    "question": "Processor access scheduling decisions may be made under which of the following circumstances?",
+    "question": "processor access scheduling decisions may be made under which of the following circumstances?",
     "answers": [
       {
-        "text": "When a task goes from the active state to the waiting state",
+        "text": "when a task goes from the active state to the waiting state",
         "correct": true
       },
       {
-        "text": "When a task transitions from the active state to the ready state",
+        "text": "when a task transitions from the active state to the ready state",
         "correct": true
       },
       {
-        "text": "When a task goes from the waiting state to the ready state",
+        "text": "when a task goes from the waiting state to the ready state",
         "correct": true
       },
       {
-        "text": "When a task terminates",
+        "text": "when a task terminates",
         "correct": true
       }
     ]
   },
   {
-    "question": "By definition, a deadlock is a situation where:",
+    "question": "by definition, a deadlock is a situation where:",
     "answers": [
       {
         "text": "at least two processes are waiting for conditions that cannot be met",
@@ -13126,45 +13126,45 @@
     ]
   },
   {
-    "question": "\"Hard\" real-time system:",
+    "question": "\"hard\" real-time system:",
     "answers": [
       {
-        "text": "Guaranteed response time",
+        "text": "guaranteed response time",
         "correct": true
       },
       {
-        "text": "Guarantees interrupt handling time",
+        "text": "guarantees interrupt handling time",
         "correct": false
       },
       {
-        "text": "Guarantees average response time",
+        "text": "guarantees average response time",
         "correct": false
       }
     ]
   },
   {
-    "question": "Static relocation is performed by:",
+    "question": "static relocation is performed by:",
     "answers": [
       {
-        "text": "Special registers (DATUM)",
+        "text": "special registers (datum)",
         "correct": false
       },
       {
-        "text": "Loader",
+        "text": "loader",
         "correct": true
       },
       {
-        "text": "Segment descriptors",
+        "text": "segment descriptors",
         "correct": false
       },
       {
-        "text": "Compiler",
+        "text": "compiler",
         "correct": true
       }
     ]
   },
   {
-    "question": "Logical address is:",
+    "question": "logical address is:",
     "answers": [
       {
         "text": "relative address",
@@ -13185,7 +13185,7 @@
     ]
   },
   {
-    "question": "What is the average time in the system for tasks in the batch, using SJF algorithm? The system is equipped with 3 processors",
+    "question": "what is the average time in the system for tasks in the batch, using sjf algorithm? the system is equipped with 3 processors",
     "answers": [
       {
         "text": "3.475",
@@ -13198,7 +13198,7 @@
     ]
   },
   {
-    "question": "In RAID 4, after replacing the corrupted disk with a new one, what values should be put in the strip on disk 3?",
+    "question": "in raid 4, after replacing the corrupted disk with a new one, what values should be put in the strip on disk 3?",
     "answers": [
       {
         "text": "10100",
@@ -13207,7 +13207,7 @@
     ]
   },
   {
-    "question": "Assuming that the instruction is 32 bits, the data accessed in the instructions are 2, 4 or 8 bytes, the memory access addressing is on the word (2-byte) boundary, and the page size is 4kB, how many exceptions \"page faults\" can one instruction cause?",
+    "question": "assuming that the instruction is 32 bits, the data accessed in the instructions are 2, 4 or 8 bytes, the memory access addressing is on the word (2-byte) boundary, and the page size is 4kb, how many exceptions \"page faults\" can one instruction cause?",
     "answers": [
       {
         "text": "4",
@@ -13216,31 +13216,31 @@
     ]
   },
   {
-    "question": "Is memory protection useless on a single-user system?",
+    "question": "is memory protection useless on a single-user system?",
     "answers": [
       {
-        "text": "Prawda",
+        "text": "prawda",
         "correct": false
       },
       {
-        "text": "Fałsz",
+        "text": "fałsz",
         "correct": true
       }
     ]
   },
   {
-    "question": "Which of the following information is stored on task switching?",
+    "question": "which of the following information is stored on task switching?",
     "answers": [
       {
         "text": "scheduler data",
         "correct": true
       },
       {
-        "text": "I/O status information",
+        "text": "i/o status information",
         "correct": true
       },
       {
-        "text": "Contents of the instruction register and similar registers",
+        "text": "contents of the instruction register and similar registers",
         "correct": true
       },
       {
@@ -13250,32 +13250,32 @@
     ]
   },
   {
-    "question": "Internal fragmentation can be removed by:",
+    "question": "internal fragmentation can be removed by:",
     "answers": [
       {
-        "text": "Movement of allocated blocks in memory",
+        "text": "movement of allocated blocks in memory",
         "correct": false
       },
       {
-        "text": "Transferring allocated memory blocks to disk",
+        "text": "transferring allocated memory blocks to disk",
         "correct": false
       },
       {
-        "text": "The use of the \"onion\" algorithm",
+        "text": "the use of the \"onion\" algorithm",
         "correct": false
       },
       {
-        "text": "Allocating unused portions of memory within blocks to other programs",
+        "text": "allocating unused portions of memory within blocks to other programs",
         "correct": false
       },
       {
-        "text": "No response from the others",
+        "text": "no response from the others",
         "correct": true
       }
     ]
   },
   {
-    "question": "Which of the following are affected by the thrashing phenomenon?",
+    "question": "which of the following are affected by the thrashing phenomenon?",
     "answers": [
       {
         "text": "mass memory",
@@ -13296,56 +13296,56 @@
     ]
   },
   {
-    "question": "Using the Test-And-Set instruction in synchronization:",
+    "question": "using the test-and-set instruction in synchronization:",
     "answers": [
       {
-        "text": "Requires organizing inactive waiting in queues",
+        "text": "requires organizing inactive waiting in queues",
         "correct": false
       },
       {
-        "text": "Stops the processor if 0 is read",
+        "text": "stops the processor if 0 is read",
         "correct": false
       },
       {
-        "text": "Requires an explicit relinquishment of the processor to another process",
+        "text": "requires an explicit relinquishment of the processor to another process",
         "correct": false
       },
       {
-        "text": "It requires processes to actively wait",
+        "text": "it requires processes to actively wait",
         "correct": true
       }
     ]
   },
   {
-    "question": "The resources of the computer system are:",
+    "question": "the resources of the computer system are:",
     "answers": [
       {
-        "text": "Peripheral devices",
+        "text": "peripheral devices",
         "correct": true
       },
       {
-        "text": "Files",
+        "text": "files",
         "correct": true
       },
       {
-        "text": "Primary memory",
+        "text": "primary memory",
         "correct": true
       },
       {
-        "text": "User programs",
+        "text": "user programs",
         "correct": false
       }
     ]
   },
   {
-    "question": "Address translation aims to:",
+    "question": "address translation aims to:",
     "answers": [
       {
         "text": "converting a physical address to a virtual one",
         "correct": false
       },
       {
-        "text": "Generating a \"frame error\" interrupt when the page is out of memory",
+        "text": "generating a \"frame error\" interrupt when the page is out of memory",
         "correct": false
       },
       {
@@ -13359,39 +13359,39 @@
     ]
   },
   {
-    "question": "In UNIX, access rights are specified:",
+    "question": "in unix, access rights are specified:",
     "answers": [
       {
-        "text": "Separately for the user, the group to which the user belongs and for all others",
+        "text": "separately for the user, the group to which the user belongs and for all others",
         "correct": true
       },
       {
-        "text": "Individually for each file",
+        "text": "individually for each file",
         "correct": true
       },
       {
-        "text": "Separately for write, read and execute/search",
+        "text": "separately for write, read and execute/search",
         "correct": true
       },
       {
-        "text": "At the same time, for all files in a given directory owned by the user",
+        "text": "at the same time, for all files in a given directory owned by the user",
         "correct": false
       }
     ]
   },
   {
-    "question": "Individual interrupt mask:",
+    "question": "individual interrupt mask:",
     "answers": [
       {
         "text": "a combinational circuit that calculates the number of the interrupt received",
         "correct": false
       },
       {
-        "text": "a register whose bits are ORed (alternative) with the bits from the interrupt request register",
+        "text": "a register whose bits are ored (alternative) with the bits from the interrupt request register",
         "correct": false
       },
       {
-        "text": "a register whose bits are ANDed (conjunction) with the bits from the interrupt request register",
+        "text": "a register whose bits are anded (conjunction) with the bits from the interrupt request register",
         "correct": true
       },
       {
@@ -13401,7 +13401,7 @@
     ]
   },
   {
-    "question": "The page reference and modification bits are used to:",
+    "question": "the page reference and modification bits are used to:",
     "answers": [
       {
         "text": "locality of references detection",
@@ -13422,7 +13422,7 @@
     ]
   },
   {
-    "question": "The purpose of mutual exclusion is:",
+    "question": "the purpose of mutual exclusion is:",
     "answers": [
       {
         "text": "deadlock prevention",
@@ -13443,7 +13443,7 @@
     ]
   },
   {
-    "question": "The following situations trigger exceptions (processor internal interrupts) of the \"error\" type:",
+    "question": "the following situations trigger exceptions (processor internal interrupts) of the \"error\" type:",
     "answers": [
       {
         "text": "an attempt to write to the page for which the \"read only\" bit was set",
@@ -13464,7 +13464,7 @@
     ]
   },
   {
-    "question": "When starting a program, how is control passed to it from the operating system?",
+    "question": "when starting a program, how is control passed to it from the operating system?",
     "answers": [
       {
         "text": "extracode",
@@ -13479,34 +13479,34 @@
         "correct": false
       },
       {
-        "text": "return from interrupt handler IRET",
+        "text": "return from interrupt handler iret",
         "correct": true
       }
     ]
   },
   {
-    "question": "Having two-level page index tables:",
+    "question": "having two-level page index tables:",
     "answers": [
       {
-        "text": "the content of a level I table element is an index in a level II table",
+        "text": "the content of a level i table element is an index in a level ii table",
         "correct": false
       },
       {
-        "text": "the content of a level I table element points to a level II table",
+        "text": "the content of a level i table element points to a level ii table",
         "correct": true
       },
       {
-        "text": "the content of a level I table element is added to the content of a level II table element",
+        "text": "the content of a level i table element is added to the content of a level ii table element",
         "correct": false
       },
       {
-        "text": "the content of the level I table element is concatenated (combined) with the content of the level II table element",
+        "text": "the content of the level i table element is concatenated (combined) with the content of the level ii table element",
         "correct": false
       }
     ]
   },
   {
-    "question": "The scheduling goal, which is to occupy processors as efficiently as possible, is:",
+    "question": "the scheduling goal, which is to occupy processors as efficiently as possible, is:",
     "answers": [
       {
         "text": "utilization",
@@ -13523,28 +13523,28 @@
     ]
   },
   {
-    "question": "If the loader inserts a program with absolute addresses into a fixed address space, it is called:",
+    "question": "if the loader inserts a program with absolute addresses into a fixed address space, it is called:",
     "answers": [
       {
-        "text": "Dynamic relocation",
+        "text": "dynamic relocation",
         "correct": false
       },
       {
-        "text": "Static loading",
+        "text": "static loading",
         "correct": false
       },
       {
-        "text": "Dynamic loading",
+        "text": "dynamic loading",
         "correct": false
       },
       {
-        "text": "Static relocation",
+        "text": "static relocation",
         "correct": true
       }
     ]
   },
   {
-    "question": "What does it mean that the interrupt subsystem is vectored (all components of the correct answer must be given)?",
+    "question": "what does it mean that the interrupt subsystem is vectored (all components of the correct answer must be given)?",
     "answers": [
       {
         "text": "there is an individual interrupt mask",
@@ -13565,7 +13565,7 @@
     ]
   },
   {
-    "question": "When an exception is raised in user mode, the operating system switches to the kernel system stack, and what happens when an exception is raised in system mode?",
+    "question": "when an exception is raised in user mode, the operating system switches to the kernel system stack, and what happens when an exception is raised in system mode?",
     "answers": [
       {
         "text": "initializes the kernel system stack from the scratch",
@@ -13586,28 +13586,28 @@
     ]
   },
   {
-    "question": "Paging - two-level index tables mode of operation",
+    "question": "paging - two-level index tables mode of operation",
     "answers": [
       {
-        "text": "The content of a level 1 table element is an index in a level 2 table",
+        "text": "the content of a level 1 table element is an index in a level 2 table",
         "correct": false
       },
       {
-        "text": "The content of the level 1 table element is concatenated (combined) with the content of the level 2 table element",
+        "text": "the content of the level 1 table element is concatenated (combined) with the content of the level 2 table element",
         "correct": false
       },
       {
-        "text": "The content of a level 1 table element points to a level 2 table",
+        "text": "the content of a level 1 table element points to a level 2 table",
         "correct": true
       },
       {
-        "text": "The content of a level 1 table element points to a level 2 table",
+        "text": "the content of a level 1 table element points to a level 2 table",
         "correct": true
       }
     ]
   },
   {
-    "question": "Which scheduler is also called a job planner?",
+    "question": "which scheduler is also called a job planner?",
     "answers": [
       {
         "text": "auxiliary",
@@ -13628,7 +13628,7 @@
     ]
   },
   {
-    "question": "Paging - the key in associative memory is:",
+    "question": "paging - the key in associative memory is:",
     "answers": [
       {
         "text": "the frame number concatenated with the page number",
@@ -13649,7 +13649,7 @@
     ]
   },
   {
-    "question": "The common allocation queue to fixed blocks of memory of equal size causes:",
+    "question": "the common allocation queue to fixed blocks of memory of equal size causes:",
     "answers": [
       {
         "text": "need for compaction",
@@ -13666,32 +13666,32 @@
     ]
   },
   {
-    "question": "On UNIX, the number of files is directly limited by:",
+    "question": "on unix, the number of files is directly limited by:",
     "answers": [
       {
-        "text": "The number of bits of the field describing the size of the file",
+        "text": "the number of bits of the field describing the size of the file",
         "correct": false
       },
       {
-        "text": "The size of the space allocated for files",
+        "text": "the size of the space allocated for files",
         "correct": true
       },
       {
-        "text": "I-node table size",
+        "text": "i-node table size",
         "correct": true
       },
       {
-        "text": "The number of bits of the disk address",
+        "text": "the number of bits of the disk address",
         "correct": false
       },
       {
-        "text": "Allocation unit size",
+        "text": "allocation unit size",
         "correct": false
       }
     ]
   },
   {
-    "question": "Collective interrupt mask is:",
+    "question": "collective interrupt mask is:",
     "answers": [
       {
         "text": "a register that blocks or unlocks a non-maskable interrupt",
@@ -13712,87 +13712,87 @@
     ]
   },
   {
-    "question": "Belady anomaly occurs in:",
+    "question": "belady anomaly occurs in:",
     "answers": [
       {
-        "text": "FIFO",
+        "text": "fifo",
         "correct": true
       },
       {
-        "text": "NRU",
+        "text": "nru",
         "correct": false
       },
       {
-        "text": "LIFO",
+        "text": "lifo",
         "correct": false
       },
       {
-        "text": "LRU",
+        "text": "lru",
         "correct": false
       }
     ]
   },
   {
-    "question": "If the compiler prepares a program with absolute addresses to be loaded in a fixed address space, it is called:",
+    "question": "if the compiler prepares a program with absolute addresses to be loaded in a fixed address space, it is called:",
     "answers": [
       {
-        "text": "Static relocation",
+        "text": "static relocation",
         "correct": true
       },
       {
-        "text": "Static compiling",
+        "text": "static compiling",
         "correct": false
       },
       {
-        "text": "Dynamic relocation",
+        "text": "dynamic relocation",
         "correct": false
       },
       {
-        "text": "Dynamic compiling",
+        "text": "dynamic compiling",
         "correct": false
       }
     ]
   },
   {
-    "question": "A process can appear in the pool of scheduling processes as a result of:",
+    "question": "a process can appear in the pool of scheduling processes as a result of:",
     "answers": [
       {
-        "text": "Performing the P operation on the semaphore",
+        "text": "performing the p operation on the semaphore",
         "correct": false
       },
       {
-        "text": "Completing an I/O operation",
+        "text": "completing an i/o operation",
         "correct": true
       },
       {
-        "text": "Performing V operation on the semaphore",
+        "text": "performing v operation on the semaphore",
         "correct": true
       },
       {
-        "text": "Starting a new process",
+        "text": "starting a new process",
         "correct": true
       }
     ]
   },
   {
-    "question": "There are three processes in the system:\nC - calculation process (batch process performing complex calculations lasting several hours),\nT - text editor (user edits text document)\nK - compiler (the user compiles the program, e.g. in C++).\nAssign processes to priorities in the operating system from the highest to the lowest priority.",
+    "question": "there are three processes in the system:\nc - calculation process (batch process performing complex calculations lasting several hours),\nt - text editor (user edits text document)\nk - compiler (the user compiles the program, e.g. in c++).\nassign processes to priorities in the operating system from the highest to the lowest priority.",
     "answers": [
       {
-        "text": "highest [T]",
+        "text": "highest [t]",
         "correct": true
       },
       {
-        "text": "intermediate [K]",
+        "text": "intermediate [k]",
         "correct": true
       },
       {
-        "text": "lowest [C]",
+        "text": "lowest [c]",
         "correct": true
       }
     ]
   },
   {
-    "question": "Allocation unit for file storage:",
+    "question": "allocation unit for file storage:",
     "answers": [
       {
         "text": "may be a variable in a partition",
@@ -13807,34 +13807,34 @@
         "correct": true
       },
       {
-        "text": "It should be selected to match the characteristics of the data",
+        "text": "it should be selected to match the characteristics of the data",
         "correct": false
       }
     ]
   },
   {
-    "question": "The environment in which the process is executed includes:",
+    "question": "the environment in which the process is executed includes:",
     "answers": [
       {
-        "text": "Process address space",
+        "text": "process address space",
         "correct": true
       },
       {
-        "text": "The content in the memory management unit",
+        "text": "the content in the memory management unit",
         "correct": false
       },
       {
-        "text": "Contents of the interrupt request register",
+        "text": "contents of the interrupt request register",
         "correct": false
       },
       {
-        "text": "A set of environment variables",
+        "text": "a set of environment variables",
         "correct": true
       }
     ]
   },
   {
-    "question": "Indulgent scheduling is the best mechanism for:",
+    "question": "indulgent scheduling is the best mechanism for:",
     "answers": [
       {
         "text": "real-time system",
@@ -13855,44 +13855,44 @@
     ]
   },
   {
-    "question": "The algorithm in which the most recently loaded page is swapped out is called (enter the abbreviation if applicable):",
+    "question": "the algorithm in which the most recently loaded page is swapped out is called (enter the abbreviation if applicable):",
     "answers": [
       {
-        "text": "OPT",
+        "text": "opt",
         "correct": false
       }
     ]
   },
   {
-    "question": "Twice consecutive execution in one process of operation P on a raised binary semaphore:",
+    "question": "twice consecutive execution in one process of operation p on a raised binary semaphore:",
     "answers": [
       {
-        "text": "If a semaphore guards a critical region, it leads to a deadlock",
+        "text": "if a semaphore guards a critical region, it leads to a deadlock",
         "correct": true
       },
       {
-        "text": "It doesn't change anything",
+        "text": "it doesn't change anything",
         "correct": false
       },
       {
-        "text": "Decreases semaphore value by 2",
+        "text": "decreases semaphore value by 2",
         "correct": false
       },
       {
-        "text": "Causes the semaphore to get down",
+        "text": "causes the semaphore to get down",
         "correct": true
       }
     ]
   },
   {
-    "question": "In which swapping algorithms is it necessary to collectively clear the M-bits?",
+    "question": "in which swapping algorithms is it necessary to collectively clear the m-bits?",
     "answers": [
       {
-        "text": "LRU",
+        "text": "lru",
         "correct": false
       },
       {
-        "text": "LFU",
+        "text": "lfu",
         "correct": false
       },
       {
@@ -13908,11 +13908,11 @@
         "correct": false
       },
       {
-        "text": "FIFO",
+        "text": "fifo",
         "correct": false
       },
       {
-        "text": "NRU",
+        "text": "nru",
         "correct": false
       },
       {
@@ -13926,28 +13926,28 @@
     ]
   },
   {
-    "question": "Dynamic relocation is performed by:",
+    "question": "dynamic relocation is performed by:",
     "answers": [
       {
-        "text": "Paging system",
+        "text": "paging system",
         "correct": false
       },
       {
-        "text": "Loader",
+        "text": "loader",
         "correct": true
       },
       {
-        "text": "Special registers (DATUM)",
+        "text": "special registers (datum)",
         "correct": true
       },
       {
-        "text": "Linker",
+        "text": "linker",
         "correct": false
       }
     ]
   },
   {
-    "question": "Round-robin scheduling is the best mechanism for:",
+    "question": "round-robin scheduling is the best mechanism for:",
     "answers": [
       {
         "text": "system with different classes of tasks",
@@ -13968,7 +13968,7 @@
     ]
   },
   {
-    "question": "MMU uses index tables to:",
+    "question": "mmu uses index tables to:",
     "answers": [
       {
         "text": "generate a logical address",
@@ -13989,39 +13989,39 @@
     ]
   },
   {
-    "question": "Two successive executions of operation V in one process on a binary semaphore in down state:",
+    "question": "two successive executions of operation v in one process on a binary semaphore in down state:",
     "answers": [
       {
-        "text": "It doesn't change anything",
+        "text": "it doesn't change anything",
         "correct": false
       },
       {
-        "text": "If the semaphore guards a critical region, it can lets two processes enter the critical region",
+        "text": "if the semaphore guards a critical region, it can lets two processes enter the critical region",
         "correct": true
       },
       {
-        "text": "Raises the semaphore if there are no suspended processes",
+        "text": "raises the semaphore if there are no suspended processes",
         "correct": true
       },
       {
-        "text": "Increases semaphore value by 2",
+        "text": "increases semaphore value by 2",
         "correct": false
       }
     ]
   },
   {
-    "question": "Using the Test-And-Set instruction in synchronization:",
+    "question": "using the test-and-set instruction in synchronization:",
     "answers": [
       {
-        "text": "It requires processes to actively wait",
+        "text": "it requires processes to actively wait",
         "correct": true
       },
       {
-        "text": "Stops the processor if 0 is read",
+        "text": "stops the processor if 0 is read",
         "correct": false
       },
       {
-        "text": "Requires organizing inactive waiting in queues",
+        "text": "requires organizing inactive waiting in queues",
         "correct": false
       }
     ]
@@ -14048,7 +14048,7 @@
     ]
   },
   {
-    "question": "Scheduling disk access involves deciding on the following:",
+    "question": "scheduling disk access involves deciding on the following:",
     "answers": [
       {
         "text": "about the type of disks the system should have",
@@ -14069,74 +14069,74 @@
     ]
   },
   {
-    "question": "Which of the following memory allocation schemes can cause external fragmentation?",
+    "question": "which of the following memory allocation schemes can cause external fragmentation?",
     "answers": [
       {
-        "text": "Multiple contiguous fixed partitions of various sizes",
+        "text": "multiple contiguous fixed partitions of various sizes",
         "correct": true
       },
       {
-        "text": "Sweeping",
+        "text": "sweeping",
         "correct": true
       },
       {
-        "text": "Multiple contiguous fixed partitions of equal size",
+        "text": "multiple contiguous fixed partitions of equal size",
         "correct": false
       },
       {
-        "text": "Segmentation",
+        "text": "segmentation",
         "correct": true
       }
     ]
   },
   {
-    "question": "FIRST-FIT algorithm:",
+    "question": "first-fit algorithm:",
     "answers": [
       {
-        "text": "Avoids external fragmentation",
+        "text": "avoids external fragmentation",
         "correct": false
       },
       {
-        "text": "It allows for fast determining whether there is a free block of the required size",
+        "text": "it allows for fast determining whether there is a free block of the required size",
         "correct": false
       },
       {
-        "text": "Causes external fragmentation",
+        "text": "causes external fragmentation",
         "correct": true
       },
       {
-        "text": "Requires an ascending sorting of the list of free blocks",
+        "text": "requires an ascending sorting of the list of free blocks",
         "correct": false
       }
     ]
   },
   {
-    "question": "What does the file system layer do?",
+    "question": "what does the file system layer do?",
     "answers": [
       {
-        "text": "Manages remote files",
+        "text": "manages remote files",
         "correct": false
       },
       {
-        "text": "Manages free storage space",
+        "text": "manages free storage space",
         "correct": true
       },
       {
-        "text": "Manages remote file systems",
+        "text": "manages remote file systems",
         "correct": false
       },
       {
-        "text": "Manages relationships between files",
+        "text": "manages relationships between files",
         "correct": false
       },
       {
-        "text": "Manages directories",
+        "text": "manages directories",
         "correct": true
       }
     ]
   },
   {
-    "question": "The effective address is at the same time:",
+    "question": "the effective address is at the same time:",
     "answers": [
       {
         "text": "logical address",
@@ -14157,7 +14157,7 @@
     ]
   },
   {
-    "question": "For address translation, the following is used:",
+    "question": "for address translation, the following is used:",
     "answers": [
       {
         "text": "translation register",
@@ -14178,82 +14178,82 @@
     ]
   },
   {
-    "question": "What are the functions of the kernel?",
+    "question": "what are the functions of the kernel?",
     "answers": [
       {
-        "text": "Interrupt handling",
+        "text": "interrupt handling",
         "correct": true
       },
       {
-        "text": "File management",
+        "text": "file management",
         "correct": false
       },
       {
-        "text": "Program management",
+        "text": "program management",
         "correct": false
       },
       {
-        "text": "Memory management",
+        "text": "memory management",
         "correct": false
       }
     ]
   },
   {
-    "question": "A program compiled for execution in paged memory can be executed in regular memory.",
+    "question": "a program compiled for execution in paged memory can be executed in regular memory.",
     "answers": [
       {
-        "text": "Prawda",
+        "text": "prawda",
         "correct": false
       },
       {
-        "text": "Fałsz",
+        "text": "fałsz",
         "correct": true
       }
     ]
   },
   {
-    "question": "\"Hard\" real-time system:",
+    "question": "\"hard\" real-time system:",
     "answers": [
       {
-        "text": "Guarantees interrupt handling time",
+        "text": "guarantees interrupt handling time",
         "correct": false
       },
       {
-        "text": "Guarantees average response time",
+        "text": "guarantees average response time",
         "correct": false
       },
       {
-        "text": "Guaranteed response time",
+        "text": "guaranteed response time",
         "correct": true
       }
     ]
   },
   {
-    "question": "If the compiler prepares a program with absolute addresses to be loaded in a fixed address space, it is called:",
+    "question": "if the compiler prepares a program with absolute addresses to be loaded in a fixed address space, it is called:",
     "answers": [
       {
-        "text": "Static linking",
+        "text": "static linking",
         "correct": false
       },
       {
-        "text": "Static relocation",
+        "text": "static relocation",
         "correct": true
       },
       {
-        "text": "Static compiling",
+        "text": "static compiling",
         "correct": false
       },
       {
-        "text": "Static loading",
+        "text": "static loading",
         "correct": false
       }
     ]
   },
   {
-    "question": "At the suspended state is a process that:",
+    "question": "at the suspended state is a process that:",
     "answers": [
       {
-        "text": "waits for an I/O operation to complete",
+        "text": "waits for an i/o operation to complete",
         "correct": true
       },
       {
@@ -14271,28 +14271,28 @@
     ]
   },
   {
-    "question": "Which of the following applies to user-level threads?",
+    "question": "which of the following applies to user-level threads?",
     "answers": [
       {
-        "text": "User-level threads can themselves be multi-threaded.",
+        "text": "user-level threads can themselves be multi-threaded.",
         "correct": false
       },
       {
-        "text": "User-level threads require their descriptors in the kernel.",
+        "text": "user-level threads require their descriptors in the kernel.",
         "correct": false
       },
       {
-        "text": "User-level threads cost no execution time in system mode.",
+        "text": "user-level threads cost no execution time in system mode.",
         "correct": true
       },
       {
-        "text": "The organization of user-level threads is specific to the operating system.",
+        "text": "the organization of user-level threads is specific to the operating system.",
         "correct": false
       }
     ]
   },
   {
-    "question": "The interrupt vector consists of:",
+    "question": "the interrupt vector consists of:",
     "answers": [
       {
         "text": "condition bits",
@@ -14313,49 +14313,49 @@
     ]
   },
   {
-    "question": "The system stack must provide space for:",
+    "question": "the system stack must provide space for:",
     "answers": [
       {
-        "text": "CPU registers",
+        "text": "cpu registers",
         "correct": false
       },
       {
-        "text": "Processor registers in as many copies as there are interrupt lines and possible software interrupts",
+        "text": "processor registers in as many copies as there are interrupt lines and possible software interrupts",
         "correct": false
       },
       {
-        "text": "Processor registers in as many copies as there are devices in the system +1",
+        "text": "processor registers in as many copies as there are devices in the system +1",
         "correct": false
       },
       {
-        "text": "Processor registers in as many copies as there are interrupt lines +1",
+        "text": "processor registers in as many copies as there are interrupt lines +1",
         "correct": true
       }
     ]
   },
   {
-    "question": "A process always transitions from the \"user\" state to the \"system\" state as a result of:",
+    "question": "a process always transitions from the \"user\" state to the \"system\" state as a result of:",
     "answers": [
       {
-        "text": "Hardware interrupt",
+        "text": "hardware interrupt",
         "correct": false
       },
       {
-        "text": "A software interrupt that calls a system function",
+        "text": "a software interrupt that calls a system function",
         "correct": true
       },
       {
-        "text": "Process suspension",
+        "text": "process suspension",
         "correct": false
       },
       {
-        "text": "Debugger trap",
+        "text": "debugger trap",
         "correct": true
       }
     ]
   },
   {
-    "question": "Which mechanisms are supported by the phenomenon of locality of references?",
+    "question": "which mechanisms are supported by the phenomenon of locality of references?",
     "answers": [
       {
         "text": "reverse page index tables",
@@ -14380,7 +14380,7 @@
     ]
   },
   {
-    "question": "The interrupt acceptance sequence consists of (in the sequence):",
+    "question": "the interrupt acceptance sequence consists of (in the sequence):",
     "answers": [
       {
         "text": "identification of the interrupt level, performing a jump according to the interrupt table, saving the interrupt vector",
@@ -14401,7 +14401,7 @@
     ]
   },
   {
-    "question": "When is the scheduler called?",
+    "question": "when is the scheduler called?",
     "answers": [
       {
         "text": "at the end of the execution of each kernel procedure",
@@ -14422,28 +14422,28 @@
     ]
   },
   {
-    "question": "A multiprogram system is one that, in principle:",
+    "question": "a multiprogram system is one that, in principle:",
     "answers": [
       {
-        "text": "It allows for running programs only one after another",
+        "text": "it allows for running programs only one after another",
         "correct": false
       },
       {
-        "text": "Allows more than one program to run simultaneously",
+        "text": "allows more than one program to run simultaneously",
         "correct": true
       },
       {
-        "text": "It allows for storing many programs in primary memory",
+        "text": "it allows for storing many programs in primary memory",
         "correct": false
       },
       {
-        "text": "It allows you to store many programs in mass memory",
+        "text": "it allows you to store many programs in mass memory",
         "correct": false
       }
     ]
   },
   {
-    "question": "Priority scheduling is the best mechanism for:",
+    "question": "priority scheduling is the best mechanism for:",
     "answers": [
       {
         "text": "real-time system",
@@ -14464,7 +14464,7 @@
     ]
   },
   {
-    "question": "What is the average time in the system for tasks in the batch, using SJF algorithm?",
+    "question": "what is the average time in the system for tasks in the batch, using sjf algorithm?",
     "answers": [
       {
         "text": "7.125",
@@ -14473,7 +14473,7 @@
     ]
   },
   {
-    "question": "In RAID 4, data is placed in Strips that are \"scattered\" over the data disks...",
+    "question": "in raid 4, data is placed in strips that are \"scattered\" over the data disks...",
     "answers": [
       {
         "text": "1,1,0,0,0",
@@ -14482,7 +14482,7 @@
     ]
   },
   {
-    "question": "The virtual address consists of 8b page number and 8b offset. The page index table is shown below...",
+    "question": "the virtual address consists of 8b page number and 8b offset. the page index table is shown below...",
     "answers": [
       {
         "text": "7.144",
