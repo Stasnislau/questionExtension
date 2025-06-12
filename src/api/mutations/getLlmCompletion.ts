@@ -54,7 +54,6 @@ ${question}`;
       response_format: { type: "json_object" },
     };
   } else {
-    // mistral
     endpoint = "https://api.mistral.ai/v1/chat/completions";
     body = {
       model: model,
