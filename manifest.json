@@ -1,13 +1,19 @@
 {
   "manifest_version": 3,
   "name": "Question Finder",
-  "version": "1.2.1",
-  "description": "Finds questions in the current page and marks correct answers.",
+  "version": "3.0.0",
+  "description": "Finds questions in the current page and solves them using AI.",
   "permissions": [
-    "activeTab",
-    "scripting",
-    "storage"
+    "storage",
+    "activeTab"
   ],
+  "host_permissions": [
+    "https://api.openai.com/",
+    "https://api.mistral.ai/"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
   "content_scripts": [
     {
       "matches": [

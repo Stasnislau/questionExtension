@@ -34,3 +34,87 @@
     background: #555;
   }
   
+  /* Floating Action Button */
+  #llm-fab {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #4f46e5;
+    color: white;
+    font-size: 28px;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease-in-out, background-color 0.2s;
+  }
+  
+  #llm-fab:hover {
+    transform: scale(1.1);
+    background-color: #4338ca;
+  }
+  
+  /* Answer Overlay */
+  #llm-answer-overlay {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 350px;
+    max-height: 80vh;
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    z-index: 100000;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  
+  #llm-answer-overlay.error {
+    border-left: 5px solid #ef4444;
+  }
+  
+  #llm-answer-overlay pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 12px;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    color: #1f2937;
+    font-size: 14px;
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+  
+  #llm-answer-overlay button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: #9ca3af;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+  }
+  
+  #llm-answer-overlay button:hover {
+    color: #1f2937;
+  }
+  
+  .stealth-highlight {
+    /* A very subtle indicator, almost invisible unless you know where to look */
+    border-bottom: 2px solid #f3fffa; /* A very light, desaturated green dotted line */
+    background-color: transparent !important; /* Ensure no background color is applied */
+  }
+  

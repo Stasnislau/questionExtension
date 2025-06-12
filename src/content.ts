@@ -1,215 +1,447 @@
-import questions from "./questions.json";
 import "./content.css";
-import levenshtein from "./assets/levenshtein";
+import { HIGHLIGHT_COLOR } from "./consts";
 
-interface Question {
-  question: string;
-  answers: { text: string; correct: boolean }[];
-}
-interface Option {
-  text: string;
-  element: HTMLElement;
-}
+// --- DOM Manipulation ---
 
-const GetQuestionFromPage = () => {
-  const potentialQuestionElements = document.getElementsByClassName("qtext");
-  if (potentialQuestionElements.length === 0) {
-    return "";
-  }
-  const questionTextElement = potentialQuestionElements[0];
-  let questionText = questionTextElement?.textContent?.trim().toLowerCase();
-  return questionText;
+let observer: MutationObserver | null = null;
+let originalFooterHTML: string | null = null;
+const STEALTH_FOOTER_CLASS = "stealth-footer-answer";
+const STEALTH_LOADING_CLASS = "stealth-loading-indicator";
+
+const showLoadingInFooter = () => {
+  const footer = document.querySelector<HTMLElement>(
+    "#page-footer > div > div.row.footter_cc"
+  );
+  if (!footer) return;
+  const footerChild = document.querySelector<HTMLElement>(
+    "#page-footer > div > div.row.footter_cc > div.footter_lc"
+  );
+  if (!footerChild) return;
+
+  // Clean up any previous indicators to avoid duplicates
+  footer.querySelector(`.${STEALTH_LOADING_CLASS}`)?.remove();
+
+  const loadingEl = document.createElement("div");
+  loadingEl.className = STEALTH_LOADING_CLASS;
+  loadingEl.innerText = "Loading...";
+  loadingEl.style.padding = "10px 0";
+  loadingEl.style.textAlign = "center";
+  loadingEl.style.color = "gray";
+  loadingEl.style.fontWeight = "bold";
+  loadingEl.style.fontSize = "14px";
+
+  footerChild.appendChild(loadingEl);
 };
 
-const getOptionsFromPage = (): Option[] => {
-  const potentialAnswerElements =
-    document.querySelectorAll(".answer .d-flex p");
-  if (potentialAnswerElements.length === 0) {
-    return [];
+const displayAnswerInFooter = (htmlContent: string) => {
+  const footer = document.querySelector<HTMLElement>(
+    "#page-footer > div > div.row.footter_cc"
+  );
+  if (!footer) return;
+
+  if (originalFooterHTML === null) {
+    originalFooterHTML = footer.innerHTML;
   }
-  const options = Array.from(potentialAnswerElements).map((el) => ({
-    text: el.textContent?.trim().toLowerCase() || "",
-    element: el as HTMLElement,
-  }));
-  return options;
+
+  const answerContainer = document.createElement("div");
+  answerContainer.className = STEALTH_FOOTER_CLASS;
+  answerContainer.innerHTML = htmlContent;
+  answerContainer.style.padding = "10px";
+  answerContainer.style.textAlign = "center";
+  answerContainer.style.fontSize = "14px";
+  answerContainer.style.color = "gray";
+
+  footer.innerHTML = ""; // Clear existing footer content
+  footer.appendChild(answerContainer);
 };
 
-const markQuestions = (questions: Question[], isBackground = true) => {
-  const questionText = GetQuestionFromPage();
-  const options = getOptionsFromPage();
+const getFullQuestionContext = (
+  questionElement: HTMLElement
+): string | null => {
+  const qtextElement = questionElement.querySelector<HTMLElement>(".qtext");
+  if (!qtextElement) return null;
 
-  if (questionText) {
-    const matchingQuestions = questions.filter(
-      (q) => levenshtein(q.question, questionText) < 3
-    );
-    const answers = [] as { text: string; correct: boolean }[];
-    for (const question of matchingQuestions) {
-      for (const answer of question.answers) {
-        if (!answers.some((a) => a.text === answer.text)) {
-          answers.push(answer);
+  const mainQuestionText =
+    (qtextElement.cloneNode(true) as HTMLElement).textContent?.trim() || "";
+
+  // Type 4: Ordering question
+  const orderingContainer =
+    questionElement.querySelector<HTMLElement>(".answer.ordering");
+  if (orderingContainer) {
+    const items = Array.from(
+      orderingContainer.querySelectorAll<HTMLElement>("li.sortableitem")
+    )
+      .map((item) => item.textContent?.trim())
+      .filter(Boolean);
+    if (items.length > 0) {
+      return `Question: ${mainQuestionText}\n${items
+        .map((o) => `- ${o}`)
+        .join("\n")}`;
+    }
+  }
+
+  // Type 3: Matching question
+  const matchingTable = questionElement.querySelector<HTMLElement>(
+    ".ablock table.answer"
+  );
+  if (matchingTable) {
+    const termsToMatch: string[] = [];
+    const availableOptions: string[] = [];
+    matchingTable.querySelectorAll("tr").forEach((row, index) => {
+      const termElement = row.querySelector<HTMLElement>(".text");
+      if (termElement) termsToMatch.push(termElement.innerText.trim());
+      if (index === 0) {
+        const selectElement = row.querySelector<HTMLSelectElement>("select");
+        if (selectElement) {
+          Array.from(selectElement.options).forEach((opt) => {
+            if (opt.value) availableOptions.push(opt.text.trim());
+          });
         }
       }
-    }
-    const matchingQuestion = {
-      question: matchingQuestions[0]?.question,
-      answers: answers,
-    };
-    if (matchingQuestion) {
-      displayFoundQuestion(
-        matchingQuestion.question,
-        matchingQuestion.answers.filter((a) => a.correct).map((a) => a.text)
-      );
-      options.forEach((option) => {
-        const matchingAnswer = matchingQuestion.answers.find(
-          (a) => levenshtein(a.text, option.text) < 3
-        );
-        if (matchingAnswer) {
-          if (matchingAnswer.correct) {
-            isBackground
-              ? (option.element.style.backgroundColor = "#90ee90")
-              : (option.element.style.borderBottom = "2px solid #A8E4A0");
-          } else {
-            isBackground
-              ? (option.element.style.backgroundColor = "#FF5733")
-              : (option.element.style.borderBottom = "2px solid #C41E3A");
-          }
-        } else {
-          isBackground
-            ? (option.element.style.backgroundColor = "#FFFDE1")
-            : (option.element.style.borderBottom = "2px solid #FFFDE1");
-        }
-      });
-    } else {
-      displayNoDataMessage(questionText);
-    }
-  }
-};
-
-const displayNoDataMessage = (question: string) => {
-  const message = document.createElement("div");
-  message.textContent = `No data for question: ${question}`;
-  message.className = "no-data-message";
-  Object.assign(message.style, {
-    position: "fixed",
-    top: "10%",
-    right: "10%",
-    width: "150px",
-    maxHeight: "200px",
-    overflowY: "auto",
-    backgroundColor: "gray",
-    borderRadius: "5px",
-    border: "1px solid black",
-    shadow: "1px 1px 5px black",
-    color: "black",
-    padding: "10px",
-    zIndex: "100000",
-  });
-  const closeButton = document.createElement("button");
-  closeButton.textContent = "X";
-  closeButton.style.position = "absolute";
-  closeButton.style.top = "0";
-  closeButton.style.right = "0";
-  closeButton.style.backgroundColor = "#E6E6E6";
-  closeButton.style.color = "white";
-  closeButton.style.border = "none";
-  closeButton.style.borderRadius = "5px";
-  closeButton.style.cursor = "pointer";
-  closeButton.addEventListener("click", () => message.remove());
-  message.appendChild(closeButton);
-
-  document.body.appendChild(message);
-};
-
-const displayFoundQuestion = (question: string, correctOptions: string[]) => {
-  const message = document.createElement("div");
-  message.textContent = `Found question: ${question}`;
-
-  message.className = "found-question";
-  Object.assign(message.style, {
-    position: "fixed",
-    top: "10%",
-    left: "10%",
-    width: "150px",
-    maxHeight: "200px",
-    overflowY: "auto",
-    backgroundColor: "#f0f0f0",
-    borderRadius: "5px",
-    fontSize: "0.8rem",
-    border: "1px solid black",
-    shadow: "1px 1px 5px black",
-    color: "black",
-    padding: "10px",
-    zIndex: "100000",
-  });
-
-  const closeButton = document.createElement("button");
-  closeButton.textContent = "X";
-  closeButton.style.position = "absolute";
-  closeButton.style.top = "0";
-  closeButton.style.right = "0";
-  closeButton.style.backgroundColor = "#E6E6E6";
-  closeButton.style.color = "white";
-  closeButton.style.border = "none";
-  closeButton.style.borderRadius = "5px";
-  closeButton.style.cursor = "pointer";
-  closeButton.addEventListener("click", () => message.remove());
-  message.appendChild(closeButton);
-  const h3 = document.createElement("h3");
-  h3.textContent = "Correct options:";
-  h3.style.marginBottom = "5px";
-  h3.style.fontSize = "0.8rem";
-  h3.style.fontWeight = "bold";
-
-  message.appendChild(h3);
-  for (const option of correctOptions) {
-    const optionElement = document.createElement("div");
-    optionElement.style.fontSize = "1rem";
-    optionElement.textContent = option;
-    message.appendChild(optionElement);
-  }
-  document.body.appendChild(message);
-};
-
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  if (request.isEnabled !== undefined) {
-    if (request.isEnabled) {
-      markQuestions(questions);
-    } else {
-      const noDataMessages = document.querySelectorAll(".no-data-message");
-      const foundQuestions = document.querySelectorAll(".found-question");
-      if (noDataMessages && noDataMessages.length > 0) {
-        noDataMessages.forEach((message) => message.remove());
-      }
-      if (foundQuestions && foundQuestions.length > 0) {
-        foundQuestions.forEach((message) => message.remove());
-      }
-      const options = getOptionsFromPage();
-      options.forEach((option) => {
-        option.element.style.backgroundColor = "";
-        option.element.style.borderBottom = "";
-      });
-    }
-  }
-});
-
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  if (request.isBackground !== undefined && request.isEnabled) {
-    const options = getOptionsFromPage();
-    options.forEach((option) => {
-      option.element.style.backgroundColor = "";
-      option.element.style.borderBottom = "";
     });
-    if (request.isBackground) {
-      markQuestions(questions, true);
-    } else {
-      markQuestions(questions, false);
+    if (termsToMatch.length > 0 && availableOptions.length > 0) {
+      return `Question: ${mainQuestionText}\n\nMatch the following terms:\n${termsToMatch
+        .map((t) => `- ${t}`)
+        .join(
+          "\n"
+        )}\n\nWith one of the following descriptions:\n${availableOptions
+        .map((o) => `- ${o}`)
+        .join("\n")}`;
     }
+  }
+
+  // Type 2: Gap select
+  const gapSelectElement =
+    qtextElement.querySelector<HTMLSelectElement>("select.select");
+  if (gapSelectElement) {
+    const qtextClone = qtextElement.cloneNode(true) as HTMLElement;
+    qtextClone.querySelector("select.select")?.remove();
+    const questionTextWithBlank = (qtextClone.textContent || "")
+      .trim()
+      .replace(/\s+$/, " [BLANK]");
+
+    const options = Array.from(gapSelectElement.options)
+      .map((opt) => opt.text.trim())
+      .filter(Boolean);
+
+    if (options.length > 0) {
+      return `Fill in the blank.\n\nSentence: ${questionTextWithBlank}\n\nOptions:\n${options
+        .map((o) => `- ${o}`)
+        .join("\n")}`;
+    }
+  }
+
+  // Type 1: Standard multiple choice
+  const standardOptionsContainer = questionElement.querySelector(".answer");
+  if (standardOptionsContainer) {
+    const options = Array.from(
+      standardOptionsContainer.querySelectorAll<HTMLElement>(".flex-fill")
+    )
+      .map((el) => el.textContent?.trim() || "")
+      .filter(Boolean);
+    if (options.length > 0) {
+      return `Question: ${mainQuestionText}\n\nOptions:\n${options
+        .map((o) => `- ${o}`)
+        .join("\n")}`;
+    }
+  }
+
+  return mainQuestionText;
+};
+
+function generateAbbreviations(items: string[]): Record<string, string> {
+  const abbreviations: Record<string, string> = {};
+  const usedAbbreviations = new Set<string>();
+
+  for (const item of items) {
+    let abbr = "";
+    let len = 3;
+    while (true) {
+      abbr = item.substring(0, len);
+      if (!usedAbbreviations.has(abbr) || len >= item.length) {
+        break;
+      }
+      len++;
+    }
+    usedAbbreviations.add(abbr);
+    abbreviations[item] = abbr;
+  }
+  return abbreviations;
+}
+
+const determineQuestionType = (questionElement: HTMLElement): string => {
+  if (questionElement.querySelector(".answer.ordering")) return "ordering";
+  if (questionElement.querySelector(".ablock table.answer")) return "matching";
+  if (questionElement.querySelector(".qtext select.select")) return "gapFill";
+  return "standard";
+};
+
+const highlightAnswers = (
+  answers: string[],
+  elementId: string,
+  questionType: string
+) => {
+  try {
+    const questionElement = document.getElementById(elementId);
+    if (!questionElement) return;
+
+    clearHighlights(elementId);
+
+    switch (questionType) {
+      case "ordering":
+        const initialItems = Array.from(
+          questionElement.querySelectorAll<HTMLElement>(
+            ".answer.ordering li.sortableitem"
+          )
+        )
+          .map((item) => item.textContent?.trim() || "")
+          .filter(Boolean);
+        const orderedItemsFromLlm = answers.map((item) =>
+          item.replace(/^\d+\.\s/, "").trim()
+        );
+
+        if (initialItems.length > 0) {
+          const abbrMap = generateAbbreviations(initialItems);
+          const abbrSequence = orderedItemsFromLlm
+            .map((orderedItem) => abbrMap[orderedItem] || "?")
+            .join(", ");
+          displayAnswerInFooter(abbrSequence);
+        }
+        break;
+      case "matching":
+        const answerMap = new Map<string, string>();
+        answers.forEach((a) => {
+          // Handles "Term - Description", where description can contain hyphens.
+          const parts = a.split(/\s+-\s+/);
+          if (parts.length >= 2) {
+            const term = parts.shift()?.trim();
+            const description = parts.join(" - ").trim();
+            if (term) {
+              answerMap.set(term, description);
+            }
+          }
+        });
+
+        if (answerMap.size === 0) return;
+
+        const displayParts: string[] = [];
+        questionElement
+          .querySelectorAll<HTMLElement>(".ablock table.answer tr")
+          .forEach((row) => {
+            const textEl = row.querySelector<HTMLElement>(".text");
+            const term = textEl?.innerText.trim();
+            if (term && answerMap.has(term)) {
+              const desc = answerMap.get(term)!;
+              displayParts.push(`<b>${term}</b> → ${desc}`);
+            }
+          });
+
+        if (displayParts.length > 0) {
+          displayAnswerInFooter(displayParts.join("<br>"));
+        }
+        break;
+      case "gapFill":
+        const answerText = answers[0];
+        if (!answerText) return;
+        const gapSelectElement =
+          questionElement.querySelector<HTMLSelectElement>(
+            ".qtext select.select"
+          );
+        if (gapSelectElement) {
+          const option = Array.from(gapSelectElement.options).find(
+            (o) => o.text.trim() === answerText
+          );
+          if (option) {
+            displayAnswerInFooter(answerText);
+          }
+        }
+        break;
+      case "standard":
+        questionElement.querySelectorAll(".answer .flex-fill").forEach((el) => {
+          const parentRow = el.closest(".d-flex");
+          const currentOptionText = el.textContent?.trim() ?? "";
+          if (answers.includes(currentOptionText) && parentRow) {
+            (parentRow as HTMLElement).style.textDecoration = "underline";
+            (parentRow as HTMLElement).style.textDecorationColor =
+              HIGHLIGHT_COLOR;
+            (parentRow as HTMLElement).style.textDecorationThickness = "2px";
+          }
+        });
+
+        if (answers.length > 0) {
+          displayAnswerInFooter(answers.join("<br>"));
+        }
+        break;
+    }
+  } catch (error) {
+    console.error("Error in highlightAnswers:", error);
+  }
+};
+
+const handlePotentialQuestions = () => {
+  chrome.storage.sync.get("isAutoMode", (settings) => {
+    if (!settings.isAutoMode) return;
+    document
+      .querySelectorAll<HTMLElement>('.que:not([data-processed="true"])')
+      .forEach((questionElement) => {
+        const questionId = questionElement.id;
+        if (!questionId) return;
+
+        questionElement.dataset.processed = "true";
+
+        const rightAnswerElement = questionElement.querySelector<HTMLElement>(
+          ".outcome .feedback .rightanswer"
+        );
+        if (rightAnswerElement) {
+          console.log(
+            `Found a pre-answered question (${questionId}), parsing answer directly.`
+          );
+          const answerText = rightAnswerElement.innerText
+            .replace(/^[\s\S]*:\s*/, "")
+            .trim();
+          const answers = answerText.includes("→")
+            ? answerText.split(",").map((a) => a.trim())
+            : [answerText];
+          const questionType = determineQuestionType(questionElement);
+          highlightAnswers(answers, questionId, questionType);
+          return;
+        }
+
+        const context = getFullQuestionContext(questionElement);
+        const questionType = determineQuestionType(questionElement);
+        if (context) {
+          chrome.runtime.sendMessage({
+            action: "getLlmAnswerFromContent",
+            question: context,
+            elementId: questionId,
+            questionType: questionType,
+          });
+        }
+      });
+  });
+};
+
+const clearHighlights = (elementId?: string) => {
+  const scope = elementId ? document.getElementById(elementId) : document;
+  if (!scope) return;
+  scope.querySelectorAll(".answer .d-flex").forEach((el) => {
+    (el as HTMLElement).style.textDecoration = "none";
+  });
+  scope.querySelectorAll(".stealth-footer-answer").forEach((el) => el.remove());
+
+  // Restore footer if it was modified OR remove loading indicator
+  const footer = document.querySelector<HTMLElement>(
+    "#page-footer > div > div.row.footter_cc"
+  );
+  if (footer && originalFooterHTML !== null) {
+    footer.innerHTML = originalFooterHTML;
+    originalFooterHTML = null;
+  } else if (footer) {
+    // If no answer was displayed, just remove the loading indicator if it exists
+    footer.querySelector(`.${STEALTH_LOADING_CLASS}`)?.remove();
+  }
+};
+
+const setupFooterButtonListener = () => {
+  const footerButton = document.querySelector<HTMLButtonElement>(
+    'button[data-action="footer-popover"]'
+  );
+  if (footerButton && !footerButton.dataset.listenerAttached) {
+    footerButton.dataset.listenerAttached = "true";
+    footerButton.addEventListener("click", () => {
+      chrome.storage.sync.get("isBackground", (data) => {
+        chrome.storage.sync.set({ isBackground: !data.isBackground });
+      });
+    });
+    console.log("Footer popover button listener attached.");
+  }
+};
+
+// --- Chrome Listeners ---
+
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  switch (request.action) {
+    case "showLoadingState":
+      showLoadingInFooter();
+      break;
+    case "highlightAnswers":
+      chrome.storage.sync.get(["isEnabled", "isBackground"], (settings) => {
+        if (settings.isEnabled && settings.isBackground) {
+          const cleanAnswers = request.answers.map((a: string) =>
+            a.replace(/^CORRECT_ANSWER:\s*/, "")
+          );
+          highlightAnswers(
+            cleanAnswers,
+            request.elementId,
+            request.questionType
+          );
+        }
+      });
+      break;
+    case "clearHighlights":
+      clearHighlights();
+      break;
+  }
+  return true;
+});
+
+function setupObserver() {
+  chrome.storage.sync.get("isAutoMode", (settings) => {
+    if (settings.isAutoMode) {
+      if (observer) return;
+      observer = new MutationObserver(handlePotentialQuestions);
+      observer.observe(document.body, { childList: true, subtree: true });
+      handlePotentialQuestions();
+      console.log("MutationObserver started for auto-analysis.");
+    } else {
+      if (observer) {
+        observer.disconnect();
+        observer = null;
+        console.log("MutationObserver stopped.");
+      }
+    }
+  });
+}
+
+// Listen for changes in settings to enable/disable the observer
+chrome.storage.onChanged.addListener((changes, area) => {
+  if (area !== "sync") return;
+
+  if (changes.isAutoMode) {
+    setupObserver();
+    // If auto-mode is disabled, also clear highlights
+    if (!changes.isAutoMode.newValue) {
+      clearHighlights();
+    }
+  }
+
+  const wasEnabled = changes.isEnabled?.oldValue;
+  const isNowEnabled = changes.isEnabled?.newValue;
+  const wasHighlighting = changes.isBackground?.oldValue;
+  const isNowHighlighting = changes.isBackground?.newValue;
+
+  // When the extension or background highlighting is disabled, clear all visuals.
+  if (
+    (changes.isEnabled && !isNowEnabled) ||
+    (changes.isBackground && !isNowHighlighting)
+  ) {
+    clearHighlights();
+  }
+
+  // When re-enabling, re-process all questions on the page.
+  if (
+    (changes.isEnabled && isNowEnabled && !wasEnabled) ||
+    (changes.isBackground && isNowHighlighting && !wasHighlighting)
+  ) {
+    document
+      .querySelectorAll<HTMLElement>('.que[data-processed="true"]')
+      .forEach((el) => {
+        el.removeAttribute("data-processed");
+      });
+    handlePotentialQuestions();
   }
 });
 
-chrome.storage.sync.get(["isEnabled", "isBackground"], (result) => {
-  console.log(questions.length);
-  if (result.isEnabled) {
-    markQuestions(questions, result.isBackground);
-  }
-});
+// Initial setup
+setupObserver();
+setInterval(setupFooterButtonListener, 2000); // Periodically check for the button
