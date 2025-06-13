@@ -322,23 +322,25 @@ const handlePotentialQuestions = () => {
 };
 
 const clearHighlights = (elementId?: string) => {
+  // Always search the entire document for footer elements, regardless of scope
+  document.querySelectorAll(".stealth-loading-indicator").forEach((el) => el.remove());
+  document.querySelectorAll(".stealth-footer-answer").forEach((el) => el.remove());
+
   const scope = elementId ? document.getElementById(elementId) : document;
   if (!scope) return;
+
+  // Clear highlights within the specific question scope if provided
   scope.querySelectorAll(".answer .d-flex").forEach((el) => {
     (el as HTMLElement).style.textDecoration = "none";
   });
-  scope.querySelectorAll(".stealth-footer-answer").forEach((el) => el.remove());
 
-  // Restore footer if it was modified OR remove loading indicator
+  // Restore original footer content if it was saved
   const footer = document.querySelector<HTMLElement>(
     "#page-footer > div > div.row.footter_cc"
   );
   if (footer && originalFooterHTML !== null) {
     footer.innerHTML = originalFooterHTML;
     originalFooterHTML = null;
-  } else if (footer) {
-    // If no answer was displayed, just remove the loading indicator if it exists
-    footer.querySelector(`.${STEALTH_LOADING_CLASS}`)?.remove();
   }
 };
 
@@ -362,7 +364,11 @@ const setupFooterButtonListener = () => {
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   switch (request.action) {
     case "showLoadingState":
-      showLoadingInFooter();
+      chrome.storage.sync.get("isEnabled", (settings) => {
+        if (settings.isEnabled) {
+          showLoadingInFooter();
+        }
+      });
       break;
     case "highlightAnswers":
       chrome.storage.sync.get(["isEnabled", "isBackground"], (settings) => {
